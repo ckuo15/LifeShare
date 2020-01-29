@@ -36,24 +36,22 @@ class LoginForm extends React.Component {
 
     render () {
         return (
-            <div className='form-container'>
-                <form onSubmit={this.handleSubmit} className='form-box'>
-                    <h1>Welcome to LifeShare!</h1>
-                    <h2> Simply upload, and share!</h2>
-                    { this.renderErrors()}
-                    <div className='form'>
-                        <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username'/>
-                        <br/>
-                        <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password'/>
-                        <br/>
-                        <button type='submit'>Log In</button>
-                        <br/>
-                    </div>
-                    <div className='signup-form-redirect'>
+            <div className='splash-container'>
+                <div className='signup-container'>
+                    <form onSubmit={this.handleSubmit} className='login-box'>
+                        <h1>Welcome to LifeShare</h1>
+                        <h2> Simply upload, and share!</h2>
+                        { this.renderErrors()}
+                        <div className='login-form'>
+                            <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username'/>
+                            <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password'/>
+                            <button type='submit'>Log In</button>
+                        </div>
+                    </form>
+                    <div className='splash-login-ask'>
                         <p>Don't have an account? <span className='login'><Link to='/signup'>Sign Up</Link></span></p>
                     </div>
-                </form>
-                
+                </div>
             </div>
         )
     }

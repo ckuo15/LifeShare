@@ -21,22 +21,17 @@
   outline: 0;
   font: inherit; 
   color: inherit;
-  text-align: center;
   text-decoration: none;
-  background: #FAFAFA;
   list-style: none;
 }
 
+/* 
 .signupDiv {
   border: 1px solid #E6E6E6;
   display: inline-block;
   padding: 30px;
   margin-top: 80px;
   background: #FFFFFF;
-  position: fixed;
-  top: 50px;
-  left: 680px;
-
 }
 
 .form-box-container {
@@ -96,9 +91,6 @@ h2 {
 img {
   height: 580px;
   width: 380px;
-  position: fixed;
-  top: 50px;
-  left: 300px;
 }
 
 .signup-form-container {
@@ -106,9 +98,6 @@ img {
   display: inline-block;
   padding: 10px;
   margin-top: 80px;
-  position: fixed;
-  left: 680px;
-  top: 450px;
   width: 340px;
   background-color: #FFFFFF;
 }
@@ -118,9 +107,6 @@ img {
   display: inline-block;
   padding: 10px;
   margin-top: 80px;
-  position: fixed;
-  left: 550px;
-  top: 280px;
   width: 320px;
   background-color: #FFFFFF;
 }
@@ -130,9 +116,6 @@ img {
   display: inline-block;
   padding: 10px;
   margin-top: 80px;
-  position: fixed;
-  left: 545px;
-  top: 400px;
   width: 330px;
   background-color: #FFFFFF;
 }
@@ -153,44 +136,199 @@ html, body{
   height: 800px;
 }
 
-.bar {
-    position: fixed;
+.navbar {
     border: 1px solid rgb(230, 32, 32);
     height: 70px;
     width: 100%;
     border: 1px solid #E6E6E6;
-
-}
-
-.icon {
-  height: 25px;
-  width: 25px;
-  position: fixed;
-  left: 200px;
-  top: 30px;
 }
 
 .logo-icon {
-  position: fixed;
-  left: 230px;
-  top: 30px;
+  height: 25px;
+  width: 25px;
+}
+
+.logo-name-icon {
   font-size: 20px;
   font-family: 'Courgette', cursive;
 
 }
 
 .explore-icon {
-  position:fixed;
-  left: 1150px;
-  top: 30px;
+  
   height: 25px;
   width: 25px;
 }
 
 .profile-icon {
-  position:fixed;
-  left: 1190px;
-  top: 28px;
+  
   height: 30px;
   width: 30px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form > input {
+  margin: 5px 0;
+}
+
+.splash-container {
+  display: flex;
+  align-items: center;
+  margin-left: 300px;
+} */
+
+
+/* // margin left: object will be x px to the left */
+
+
+.splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  min-height: 100%;
+  min-width: 100%;
+  background: #FAFAFA;
+
+}
+
+.splash-image {
+  height: 620px;
+  width: 405px;
+}
+
+.signup-container {
+  height: 680px;
+  width: 300px;
+}
+
+.login-box {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  border: 1px solid #E6E6E6;
+  margin-top: 90px;
+  background-color: white;
+}
+
+.signup-box {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  border: 1px solid #E6E6E6;
+  margin-top: 90px;
+  background-color: white;
+}
+
+.login-box h1 {
+  margin-top: 30px;
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.signup-box h1 {
+  margin-top: 30px;
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-box h2 {
+  font-family: 'Courgette', cursive;
+  font-size: 15px;
+  color: #999999;
+}
+
+.signup-box h2 {
+  font-family: 'Courgette', cursive;
+  font-size: 15px;
+  color: #999999;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  align-items: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  align-items: center;
+}
+
+.login-form input {
+  border: 1px solid #E6E6E6;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+  width: 230px;
+  background-color : #FAFAFA;
+  box-shadow: none;
+}
+
+.signup-form input {
+    border: 1px solid #E6E6E6;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    width: 230px;
+    background-color : #FAFAFA;
+    box-shadow: none;
+}
+
+.login-form button {
+  background: #3897EF;
+  color: white;
+  padding: 5px;
+  width: 255px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.signup-form button {
+  background: #3897EF;
+  color: white;
+  padding: 5px;
+  width: 255px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.splash-ask {
+  border: 1px solid #E6E6E6;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.splash-ask span {
+  color: #3897EF;
+}
+
+.splash-login-ask {
+  border: 1px solid #E6E6E6;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.splash-login-ask span {
+  color: #3897EF;
+}
+
+/* 348 x 437 */
+/* 350 x 650 */
+/* 707 x 682 */

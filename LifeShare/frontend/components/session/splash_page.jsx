@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 class Splash extends React.Component {
     render (){
         return (
-            <div>
-                <img src="/assets/image1.png"/>
+            <div className='splash-container'>
+                <img className='splash-image' src={window.splashURL}/>
                 <SignupForm location = {this.props.location}/>
             </div>
         )

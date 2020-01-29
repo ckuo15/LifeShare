@@ -37,59 +37,49 @@ class SignupForm extends React.Component {
     }
 
     render() {
-        let divClassName = 'signupDiv'
+        let divClassName = 'signup-container'
         let signup = 'form-box-container'
         let login = 'login-form-container'
         if (this.props.location.pathname === '/'){
             return (
                 <div className={divClassName}>
-                    <form onSubmit={this.handleSubmit} className='form-box'>
+                    <form onSubmit={this.handleSubmit} className='signup-box'>
                         <h1>Welcome to LifeShare</h1>
                         <h2> Simply upload, and share!</h2>
                         {this.renderErrors()}
-                        <div className='form'>
+                        <div className='signup-form'>
                             <input type='text' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
-                            <br />
                             <input type='text' value={this.state.fullname} onChange={this.update('fullname')} placeholder='Full Name' />
-                            <br/>
                             <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username' />
-                            <br />
                             <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />
-                            <br />
                             <button type='submit'>Sign Up</button>
-                            <br />
-                        </div>
-                        <div className='signup-form-container'>
-                            <p>Don't have an account? <span className='login'><Link to='/login'>Log In</Link></span></p>
                         </div>
                     </form>
-                    
+                    <div className='splash-ask'>
+                        <p>Have an account? <span className='login'><Link to='/login'>Log In</Link></span></p>
+                    </div>
                 </div>
             )
         } else {
             return (
-                <div className={signup}>
-                    <form onSubmit={this.handleSubmit} className='form-box'>
-                        <h1>Welcome to LifeShare</h1>
-                        <h2> Simply upload, and share!</h2>
-                        {this.renderErrors()}
-                        <div className='form'>
-                            <input type='text' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
-                            <br />
-                            <input type='text' value={this.state.fullname} onChange={this.update('fullname')} placeholder='Full Name' />
-                            <br />
-                            <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username' />
-                            <br />
-                            <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />
-                            <br />
-                            <button type='submit'>Sign Up</button>
-                            <br />
+                <div className='splash-container'>
+                    <div className='signup-container'>
+                        <form onSubmit={this.handleSubmit} className='signup-box'>
+                            <h1>Welcome to LifeShare</h1>
+                            <h2> Simply upload, and share!</h2>
+                            {this.renderErrors()}
+                            <div className='signup-form'>
+                                <input type='text' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
+                                <input type='text' value={this.state.fullname} onChange={this.update('fullname')} placeholder='Full Name' />
+                                <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username' />
+                                <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />
+                                <button type='submit'>Sign Up</button>
+                            </div>
+                        </form>
+                        <div className='splash-ask'>
+                            <p>Have an account? <span className='login'><Link to='/login'>Log In</Link></span></p>
                         </div>
-                        <div className={login}>
-                            <p>Don't have an account? <span className='login'><Link to='/login'>Log In</Link></span></p>
-                        </div>
-                    </form>
-
+                    </div>
                 </div>
             )
         }

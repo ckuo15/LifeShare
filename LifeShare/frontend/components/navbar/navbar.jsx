@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 class navBar extends React.Component {
     render (){
         return (
-            <div className='bar'>
+            <div className='navbar'>
                 <Link to='/'>
-                    <img className='icon' src="/assets/image5.png" />
+                    <img className='logo-icon' src="/assets/image5.png" />
                     <br/>
-                    <p className='logo-icon'>| LifeShare</p>
+                    <p className='logo-name-icon'>| LifeShare</p>
                 </Link>
                 <Link to='/explore'>
                     <img className='explore-icon' src="/assets/explore.png" />
