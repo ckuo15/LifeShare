@@ -9,17 +9,17 @@ class navBar extends React.Component {
             <div className='navbar'>
                 <div className='left-icons'>
                     <Link to='/'>
-                        <img className='logo-icon' src="/assets/image5.png" />
+                        <img className='logo-icon' src={window.logoURL} />
                         <br/>
                         <p className='logo-name-icon'>| LifeShare</p>
                     </Link>
                 </div>
                 <div className='right-icons'>
                     <Link to='/explore'>
-                        <img className='explore-icon' src="/assets/explore.png" />
+                        <img className='explore-icon' src={window.exploreURL} />
                     </Link>
                     <Link>
-                        <img className='profile-icon' src="/assets/profile.png" />
+                        <img className='profile-icon' src={window.profileURL} />
                     </Link>
                 </div>
             </div>
