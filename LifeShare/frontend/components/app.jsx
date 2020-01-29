@@ -3,23 +3,24 @@ import LogInFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import { Route, Redirect, Switch, HashRouter } from 'react-router-dom';
 import Splash from './session/splash_page';
-import {AuthRoute} from '../utils/route_util';
-import navBar from './navbar/navbar';
+import {AuthRoute, ProtectedRoute} from '../utils/route_util';
+import Mainpage from './mainpage';
 
 const App = (props) => {
+    let renderedComponent;
     if (props.currentUser){
-        // <ProtectedRoute exact path='/' component={feed}/>
+        renderedComponent = Mainpage;
     } else {
-        // render splash
-        return (
-            <div>
-                <Route exact path='/' component={Splash}/>
-                <AuthRoute exact path='/signup' component={SignupFormContainer}/>
-                <AuthRoute exact path='/login' component={LogInFormContainer} />
-                <Route path='/testing' component={navBar}/>
-            </div>
-        )
-    }
+        renderedComponent = Splash;
+    };
+
+    return (
+        <div>
+            <Route exact path='/' component={renderedComponent}/>
+            <AuthRoute exact path='/signup' component={SignupFormContainer}/>
+            <AuthRoute exact path='/login' component={LogInFormContainer} />
+        </div>
+    )
 }
 
 export default App;

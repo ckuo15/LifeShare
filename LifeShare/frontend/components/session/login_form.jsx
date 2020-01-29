@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
                     <form onSubmit={this.handleSubmit} className='login-box'>
                         <h1>Welcome to LifeShare</h1>
                         <h2> Simply upload, and share!</h2>
-                        { this.renderErrors()}
+                        {this.renderErrors()}
                         <div className='login-form'>
                             <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username'/>
                             <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password'/>

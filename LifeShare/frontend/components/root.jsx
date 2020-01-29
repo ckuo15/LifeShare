@@ -1,14 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-import App from './app';
+import App from './app_container';
 
-const Root = ( { store }) => (
-    <Provider store={ store}>
+const Root = ( { store }) => {
+    return <Provider store={ store}>
         <HashRouter>
-            <App currentUser={store.getState().session.currentUser}/>
+            <App />
         </HashRouter>
     </Provider>
-);
+};
 
 export default Root;
