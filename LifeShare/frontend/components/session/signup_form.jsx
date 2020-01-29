@@ -26,7 +26,7 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className='errors'>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -48,7 +48,7 @@ class SignupForm extends React.Component {
                         <h2> Simply upload, and share!</h2>
                         {this.renderErrors()}
                         <div className='signup-form'>
-                            <input type='text' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
+                            <input type='email' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
                             <input type='text' value={this.state.fullname} onChange={this.update('fullname')} placeholder='Full Name' />
                             <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username' />
                             <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />
@@ -69,7 +69,7 @@ class SignupForm extends React.Component {
                             <h2> Simply upload, and share!</h2>
                             {this.renderErrors()}
                             <div className='signup-form'>
-                                <input type='text' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
+                                <input type='email' value={this.state.email} onChange={this.update('email')} placeholder='Email' />
                                 <input type='text' value={this.state.fullname} onChange={this.update('fullname')} placeholder='Full Name' />
                                 <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username' />
                                 <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />

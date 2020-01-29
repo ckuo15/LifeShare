@@ -176,10 +176,8 @@ img {
 }
 
 .login-box {
-  height: 300px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   border: 1px solid #E6E6E6;
   margin-top: 90px;
@@ -187,10 +185,8 @@ img {
 }
 
 .signup-box {
-  height: 400px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   border: 1px solid #E6E6E6;
   margin-top: 90px;
@@ -264,6 +260,7 @@ img {
   width: 255px;
   font-size: 15px;
   margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 .signup-form button {
@@ -273,6 +270,7 @@ img {
   width: 255px;
   font-size: 15px;
   margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .splash-ask {
@@ -365,6 +363,10 @@ img {
   cursor: pointer;
 }
 
+.errors {
+  color: #ED4956;
+  list-style-type: circle;
+}
 /* html, body{
   height: 800px;
 } */
