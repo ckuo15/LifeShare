@@ -18,9 +18,7 @@ class navBar extends React.Component {
                 <Link>
                     <img className='profile-icon' src="/assets/profile.png" />
                 </Link>
-                <div>
-                    
-                </div>
+            
             </div>
             
         )
