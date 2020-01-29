@@ -132,9 +132,7 @@ img {
   color: #3897EF;
 }
 
-html, body{
-  height: 800px;
-}
+
 
 .form {
   display: flex;
@@ -302,44 +300,53 @@ html, body{
 .navbar {
     display : flex;
     align-items: center;
-    border: 1px solid rgb(230, 32, 32);
+    border: 1px solid #DBDBDB;
     justify-content: space-between;
     height: 70px;
     width: 100%;
+    position: fixed;
     /* border: 1px solid #E6E6E6; */
 }
 
 .left-icons {
-  /* display: inline-block;
-  align-items: flex-end;
-  justify-content: space-evenly; */
-  margin-left: 60px;
+  margin-left: 300px;
+  display: flex;
+}
 
+.left-icons .splash-link {
+  display: flex;
 }
 
 .right-icons {
   justify-content: flex-end;
+  margin-right: 300px;
+  display: flex;
 }
 
 .logo-icon {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
 }
 
 .logo-name-icon {
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Courgette', cursive;
+  display: flex;
 }
 
 .explore-icon {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
+  margin-right: 18px;
+  margin-top: 4px;
 }
 
 .profile-icon {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
 }
-/* 348 x 437 */
-/* 350 x 650 */
-/* 707 x 682 */
+
+/* html, body{
+  height: 800px;
+} */

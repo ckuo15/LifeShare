@@ -8,9 +8,8 @@ class navBar extends React.Component {
         return (
             <div className='navbar'>
                 <div className='left-icons'>
-                    <Link to='/'>
+                    <Link className='splash-link' to='/'>
                         <img className='logo-icon' src={window.logoURL} />
-                        <br/>
                         <p className='logo-name-icon'>| LifeShare</p>
                     </Link>
                 </div>
@@ -30,4 +29,4 @@ class navBar extends React.Component {
 
 export default navBar;
 
-// route for line 17 to profile (need help)
+// route for line 20 to profile (need help)
