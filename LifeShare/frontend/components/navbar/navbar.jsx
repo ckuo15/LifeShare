@@ -7,18 +7,21 @@ class navBar extends React.Component {
     render (){
         return (
             <div className='navbar'>
-                <Link to='/'>
-                    <img className='logo-icon' src="/assets/image5.png" />
-                    <br/>
-                    <p className='logo-name-icon'>| LifeShare</p>
-                </Link>
-                <Link to='/explore'>
-                    <img className='explore-icon' src="/assets/explore.png" />
-                </Link>
-                <Link>
-                    <img className='profile-icon' src="/assets/profile.png" />
-                </Link>
-            
+                <div className='left-icons'>
+                    <Link to='/'>
+                        <img className='logo-icon' src="/assets/image5.png" />
+                        <br/>
+                        <p className='logo-name-icon'>| LifeShare</p>
+                    </Link>
+                </div>
+                <div className='right-icons'>
+                    <Link to='/explore'>
+                        <img className='explore-icon' src="/assets/explore.png" />
+                    </Link>
+                    <Link>
+                        <img className='profile-icon' src="/assets/profile.png" />
+                    </Link>
+                </div>
             </div>
             
         )

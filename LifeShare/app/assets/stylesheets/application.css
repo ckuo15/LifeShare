@@ -136,36 +136,6 @@ html, body{
   height: 800px;
 }
 
-.navbar {
-    border: 1px solid rgb(230, 32, 32);
-    height: 70px;
-    width: 100%;
-    border: 1px solid #E6E6E6;
-}
-
-.logo-icon {
-  height: 25px;
-  width: 25px;
-}
-
-.logo-name-icon {
-  font-size: 20px;
-  font-family: 'Courgette', cursive;
-
-}
-
-.explore-icon {
-  
-  height: 25px;
-  width: 25px;
-}
-
-.profile-icon {
-  
-  height: 30px;
-  width: 30px;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -329,6 +299,47 @@ html, body{
   color: #3897EF;
 }
 
+.navbar {
+    display : flex;
+    align-items: center;
+    border: 1px solid rgb(230, 32, 32);
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid #E6E6E6; */
+}
+
+.left-icons {
+  /* display: inline-block;
+  align-items: flex-end;
+  justify-content: space-evenly; */
+  margin-left: 60px;
+
+}
+
+.right-icons {
+  justify-content: flex-end;
+}
+
+.logo-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.logo-name-icon {
+  font-size: 20px;
+  font-family: 'Courgette', cursive;
+}
+
+.explore-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.profile-icon {
+  height: 30px;
+  width: 30px;
+}
 /* 348 x 437 */
 /* 350 x 650 */
 /* 707 x 682 */
