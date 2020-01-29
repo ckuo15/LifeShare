@@ -1,0 +1,196 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html, body, header, h1, p, div, span, input, textarea,a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit; 
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  background: #FAFAFA;
+  list-style: none;
+}
+
+.signupDiv {
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  padding: 30px;
+  margin-top: 80px;
+  background: #FFFFFF;
+  position: fixed;
+  top: 50px;
+  left: 680px;
+
+}
+
+.form-box-container {
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  padding: 30px;
+  margin-top: 80px;
+  background: #FFFFFF;
+}
+
+.form-box{
+  background-color: #FFFFFF;
+}
+
+.form {
+    border-width: 2px 2px 2px 2px;
+    display: inline-block;
+    font-size: 40px;
+    margin-top: auto;
+    background-color: #FFFFFF;
+}
+
+input, textarea {
+  background-color : #FAFAFA;
+  padding: 6px;
+  width: 200px;
+  box-shadow: none;
+  font-size: 13px;
+  font-family: serif;
+  color: #999999;
+  border: 1px solid #E6E6E6;
+}
+
+button[type='submit'] {
+  background: #3897EF;
+  color: white;
+  padding: 5px;
+  width: 220px;
+  font-size: 15px;
+}
+
+::placeholder {
+  color : rgb(161, 161, 161);
+}
+
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Courgette', cursive;
+  font-size: 15px;
+  color: #999999;
+}
+
+img {
+  height: 580px;
+  width: 380px;
+  position: fixed;
+  top: 50px;
+  left: 300px;
+}
+
+.signup-form-container {
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 80px;
+  position: fixed;
+  left: 680px;
+  top: 450px;
+  width: 340px;
+  background-color: #FFFFFF;
+}
+
+.signup-form-redirect {
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 80px;
+  position: fixed;
+  left: 550px;
+  top: 280px;
+  width: 320px;
+  background-color: #FFFFFF;
+}
+
+.login-form-container {
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 80px;
+  position: fixed;
+  left: 545px;
+  top: 400px;
+  width: 330px;
+  background-color: #FFFFFF;
+}
+
+.form-container {
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #FFFFFF;
+}
+
+.login {
+  color: #3897EF;
+}
+
+html, body{
+  height: 800px;
+}
+
+.bar {
+    position: fixed;
+    border: 1px solid rgb(230, 32, 32);
+    height: 70px;
+    width: 100%;
+    border: 1px solid #E6E6E6;
+
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  position: fixed;
+  left: 200px;
+  top: 30px;
+}
+
+.logo-icon {
+  position: fixed;
+  left: 230px;
+  top: 30px;
+  font-size: 20px;
+  font-family: 'Courgette', cursive;
+
+}
+
+.explore-icon {
+  position:fixed;
+  left: 1150px;
+  top: 30px;
+  height: 25px;
+  width: 25px;
+}
+
+.profile-icon {
+  position:fixed;
+  left: 1190px;
+  top: 28px;
+  height: 30px;
+  width: 30px;
+}
