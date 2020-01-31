@@ -20,8 +20,7 @@ const App = (props) => {
             <Route exact path='/' component={renderedComponent}/>
             <AuthRoute exact path='/signup' component={SignupFormContainer}/>
             <AuthRoute exact path='/login' component={LogInFormContainer} />
-            <ProtectedRoute path='/user/:userId' component={Profile} />
-            <Route path='/testing' component={Profile} />
+            <ProtectedRoute exact path='/testing' component={Profile}/>
         </div>
     )
 }
@@ -32,4 +31,3 @@ export default App;
 
 // if current user, then make the feed component the /
 // if not make the sign up the /
-// in profile container, pass in current user

@@ -27,6 +27,7 @@
 
 /* // margin left: object will be x px to the left */
 
+
 .splash-container {
   display: flex;
   justify-content: center;
@@ -35,13 +36,126 @@
   min-height: 100%;
   min-width: 100%;
   background: #FAFAFA;
-
 }
 
 .splash-image {
   height: 620px;
   width: 405px;
 }
+
+.other-splash-image {
+  width: 245px;
+  height: 430px;
+  position: absolute;
+  top: 101px;
+  left: 128px;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {opacity: 0%}
+  5%   {opacity: 25%}
+  10%  {opacity: 50%}
+  15%  {opacity: 75%}
+  20%  {opacity: 100%}
+  25%  {opacity: 100%}
+  30%  {opacity: 100%}
+  35%  {opacity: 100%}
+  40%  {opacity: 100%}
+  45%  {opacity: 100%}
+  50%  {opacity: 75%}
+  55%  {opacity: 50%}
+  60%  {opacity: 25%}
+  65%  {opacity: 0%}
+  70%  {opacity: 0%}
+  75%  {opacity: 0%}
+  80%  {opacity: 0%}
+  85%  {opacity: 0%}
+  90%  {opacity: 0%}
+  95%  {opacity: 0%}
+  100%  {opacity: 0%}
+}
+
+.splash-images {
+  position: relative;
+}
+
+
+/* .trans-1 {
+  opacity: 95%;
+}
+
+.trans-2 {
+  opacity: 90%;
+}
+
+.trans-3 {
+  opacity: 85%;
+}
+
+.trans-4 {
+  opacity: 80%;
+}
+
+.trans-5 {
+  opacity: 75%;
+}
+
+.trans-6 {
+  opacity: 70%;
+}
+
+.trans-7 {
+  opacity: 65%;
+}
+
+.trans-8 {
+  opacity: 60%;
+}
+
+.trans-9 {
+  opacity: 55%;
+}
+
+.trans-10 {
+  opacity: 50%;
+}
+
+.trans-11 {
+  opacity: 45%;
+}
+.trans-12 {
+  opacity: 40%;
+}
+.trans-13 {
+  opacity: 35%;
+}
+.trans-14 {
+  opacity: 30%;
+}
+.trans-15 {
+  opacity: 25%;
+}
+.trans-16 {
+  opacity: 20%;
+}
+.trans-17 {
+  opacity: 15%;
+}
+.trans-18 {
+  opacity: 10%;
+}
+.trans-19 {
+  opacity: 5%;
+}
+.trans-20 {
+  opacity: 0%;
+} */
 
 .signup-container {
   height: 680px;
@@ -236,6 +350,7 @@
   width: 27px;
   margin-right: 10px;
   margin-top: 4px;
+  cursor: pointer;
 }
 
 .grid-icon {
@@ -322,12 +437,9 @@
   font-size: 15px;
   cursor: pointer;
   margin-left: 150px;
-  font-weight: bold;
+  background: black;
+  color: white;
 }
-
-/* .profile-header p,span {
-  padding: 10px;
-} */
 
 .user-stats {
   padding: 3px;
@@ -378,6 +490,191 @@
 .username {
   font-weight: bold;
 }
-/* html, body{
-  height: 800px;
-} */
+
+.uploadModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(128, 128, 128, 0.521);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadForm {
+  width: 450px;
+  height: 350px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 2px solid black;
+} 
+
+.captionbox {
+  border: 1px solid black;
+}
+
+.leftsideForm {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.leftsideForm p {
+  border: 1px solid #999999;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #3897EE;
+  color: white;
+  font-family: 'Quattrocento Sans', sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.postimage {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+}
+
+.rightsideForm {
+    font-family: 'Quattrocento Sans', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+    margin: 10px;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.rightsideForm textarea {
+  margin-bottom: 0;
+  border-radius: 10px;
+  padding: 10px;
+  background: #FAFAFA;
+  resize: none;
+}
+
+.rightsideForm > button {
+  margin-top: 2px;
+  background: #3897EE;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  align-self: center;
+  margin-top: 14px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.rightsideForm h1 {
+  padding: 10px;
+}
+
+.profileEditModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(128, 128, 128, 0.521);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.editForm {
+  background: white;
+  height: 500px;
+  width: 600px;
+  display: flex;
+  border-radius: 30px;
+  border: 2px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.editForm > h1 {
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 60px;
+  color: #4A9FEE;
+  font-weight: bold;
+}
+
+.rightForm {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  /* margin-right: 450px;
+  margin-top: 80px; */
+}
+
+.rightForm h1 {
+  padding: 5px;
+}
+
+.rightForm button {
+  margin-top: 30px;
+  background-color: rgb(75, 159, 238);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 15px;
+}
+
+.leftForm {
+  width: 200px;
+  /* margin: 20px;
+  margin-right: 100px;
+  margin-top: 150px;
+  margin-left: 30px; */
+}
+
+.leftForm p {
+  color: rgb(33, 140, 240);
+  font-weight: bold;
+  margin-top: 55px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.profileimage {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.biobox {
+  border: 1px solid rgb(172, 171, 171);
+  margin-bottom: 0;
+  border-radius: 10px;
+  padding: 10px;
+  background: #FAFAFA;
+  resize: none;
+  height: 100px;
+  width: 200px;
+}
+
+.namebox {
+  border: 1px solid rgb(172, 171, 171);
+  margin-bottom: 0;
+  border-radius: 10px;
+  padding: 10px;
+  background: #FAFAFA;
+  resize: none;
+  height: 20px;
+  width: 100px;
+}
+

@@ -38,8 +38,6 @@ class SignupForm extends React.Component {
 
     render() {
         let divClassName = 'signup-container'
-        let signup = 'form-box-container'
-        let login = 'login-form-container'
         if (this.props.location.pathname === '/'){
             return (
                 <div className={divClassName}>
