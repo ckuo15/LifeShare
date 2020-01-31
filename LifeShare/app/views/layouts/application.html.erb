@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
     
     <script type="text/javascript">
         window.splashURL = "<%= image_url('image1.png') %>";
@@ -15,6 +17,8 @@
         window.logoURL = "<%= image_url('logo.png')%>";
         window.profileURL = "<%= image_url('profile.png')%>";
     </script>
+    <%= favicon_link_tag asset_path('logo.png') %>
+
   </head>
 
   <body>

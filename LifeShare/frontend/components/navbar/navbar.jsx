@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
 
     constructor(props) {
-        debugger;
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -27,6 +26,9 @@ class NavBar extends React.Component {
                 <div className='right-icons'>
                     <Link to='/explore'>
                         <img className='explore-icon' src={window.exploreURL} />
+                    </Link>
+                    <Link to='/uploadimage'>
+                        <img className='addimage-icon' src='assets/addpic.png' />
                     </Link>
                     <Link to=''>
                         <img className='profile-icon' src={window.profileURL} />
