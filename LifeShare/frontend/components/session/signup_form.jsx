@@ -56,7 +56,7 @@ class SignupForm extends React.Component {
                         </div>
                     </form>
                     <div className='splash-ask'>
-                        <p>Have an account? <span className='login'><Link to='/login'>Log In</Link></span></p>
+                        <p>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
                     </div>
                 </div>
             )
@@ -77,7 +77,7 @@ class SignupForm extends React.Component {
                             </div>
                         </form>
                         <div className='splash-ask'>
-                            <p>Have an account? <span className='login'><Link to='/login'>Log In</Link></span></p>
+                            <p>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
                         </div>
                     </div>
                 </div>

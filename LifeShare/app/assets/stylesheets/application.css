@@ -25,15 +25,6 @@
   list-style: none;
 }
 
-/* input[type='password'], input[type='email'], input[type='text'], input[type='submit'],textarea, button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-​
-button, input[type='submit'],a,link {
-	cursor: pointer;
-} */
-
 /* // margin left: object will be x px to the left */
 
 .splash-container {
@@ -123,6 +114,7 @@ button, input[type='submit'],a,link {
   width: 230px;
   background-color : #FAFAFA;
   box-shadow: none;
+  border-radius: 10px;
 }
 
 .signup-form input {
@@ -133,6 +125,8 @@ button, input[type='submit'],a,link {
     width: 230px;
     background-color : #FAFAFA;
     box-shadow: none;
+    border-radius: 10px;
+
 }
 
 .login-form button {
@@ -144,6 +138,7 @@ button, input[type='submit'],a,link {
   margin-top: 5px;
   margin-bottom: 30px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .signup-form button {
@@ -155,6 +150,7 @@ button, input[type='submit'],a,link {
   margin-top: 5px;
   margin-bottom: 20px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .splash-ask {
@@ -162,10 +158,12 @@ button, input[type='submit'],a,link {
   margin-top: 30px;
   padding: 10px;
   text-align: center;
+  background: white;
 }
 
 .splash-ask span {
   color: #3897EF;
+
 }
 
 .splash-login-ask {
@@ -173,6 +171,7 @@ button, input[type='submit'],a,link {
   margin-top: 30px;
   padding: 10px;
   text-align: center;
+  background: white;
 }
 
 .splash-login-ask span {

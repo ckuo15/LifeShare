@@ -49,7 +49,7 @@ class LoginForm extends React.Component {
                         </div>
                     </form>
                     <div className='splash-login-ask'>
-                        <p>Don't have an account? <span className='login'><Link to='/signup'>Sign Up</Link></span></p>
+                        <p>Don't have an account? <span className='login'><Link onClick={this.props.clearErrors } to='/signup'>Sign Up</Link></span></p>
                     </div>
                 </div>
             </div>
