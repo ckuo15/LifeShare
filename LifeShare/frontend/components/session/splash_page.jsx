@@ -40,7 +40,7 @@ class Splash extends React.Component {
             <div className='splash-container'>
                <div className='splash-images'>
                    <img className='other-splash-image' src={ window.othersplashURL }/>
-                    <img className='splash-image' src={ window.splashURL } />
+                    <img className='splash-image' src={ window.splashURL }/>
                 </div>
                 <SignupForm location = {this.props.location}/>
              </div>
