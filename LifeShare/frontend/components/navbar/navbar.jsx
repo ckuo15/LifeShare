@@ -57,7 +57,7 @@ class NavBar extends React.Component {
                     <Link to='/explore'>
                         <img className='explore-icon' src={window.exploreURL} />
                     </Link>
-                    <img onClick={ this.showModal} className='addimage-icon' src='assets/addpic.png' />
+                    <img onClick={ this.showModal} className='addimage-icon' src={window.uploadURL}/>
                     { this.state.show && form }
                     <Link to='/testing'>
                         <img className='profile-icon' src={window.profileURL} />

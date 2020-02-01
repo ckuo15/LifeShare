@@ -28,7 +28,7 @@ class Profile extends React.Component {
                 <form className='editForm'>
                     <h1>Edit Profile</h1>
                     <div className='leftForm'>
-                        <img className='profileimage' src='assets/puppy.png' />
+                        <img className='profileimage' src={ window.puppyURL }/>
                         <p>Change Profile Picture</p>
                     </div>
                     <div className='rightForm'>
@@ -47,7 +47,7 @@ class Profile extends React.Component {
             { this.state.show && form }
             <div className='middle-container'>
                 <div className='profile-picture'>
-                    <img src='assets/puppy.png'/>
+                    <img src={ window.puppyURL }/>
                 </div>
                 <div className='profile-header'>
                     <div className='profile-description'>
@@ -67,7 +67,7 @@ class Profile extends React.Component {
             </div>
             <div className='profile-middleline'>
                 <div className='middleline'>
-                    <img className='grid-icon' src='assets/grid-icon.png'/>
+                    <img className='grid-icon' src={ window.gridURL }/>
                     <span>POSTS</span>
                 </div>
             </div>
