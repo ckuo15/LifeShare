@@ -34,7 +34,7 @@ class NavBar extends React.Component {
             <div onClick= { this.hideModal } className='uploadModal'>
                 <form className='uploadForm'>
                     <div className='leftsideForm'>
-                        <img className='postimage' src='assets/uploadimage.png'/>
+                        <img className='postimage' src={ window.uploadimageURL }/>
                         <p>Upload image</p>
                     </div>
                     <div className='rightsideForm'>
@@ -57,7 +57,7 @@ class NavBar extends React.Component {
                     <Link to='/explore'>
                         <img className='explore-icon' src={window.exploreURL} />
                     </Link>
-                    <img onClick={ this.showModal} className='addimage-icon' src={window.uploadURL}/>
+                    <img onClick={ this.showModal} className='addimage-icon' src={ window.uploadURL } />
                     { this.state.show && form }
                     <Link to='/testing'>
                         <img className='profile-icon' src={window.profileURL} />
