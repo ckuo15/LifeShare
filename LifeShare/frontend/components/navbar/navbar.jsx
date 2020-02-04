@@ -54,12 +54,10 @@ class NavBar extends React.Component {
                     </Link>
                 </div>
                 <div className='right-icons'>
-                    <Link to='/explore'>
-                        <img className='explore-icon' src={window.exploreURL} />
-                    </Link>
+                    <a href="https://www.youtube.com/watch?v=bjvc6N6px64"><img className='explore-icon' src={window.exploreURL} /></a>
                     <img onClick={ this.showModal} className='addimage-icon' src={ window.uploadURL } />
                     { this.state.show && form }
-                    <Link to='/testing'>
+                    <Link to={`/user/${this.props.currentUser}`}>
                         <img className='profile-icon' src={window.profileURL} />
                     </Link>
                     <button className='logout-button' onClick={this.handleSubmit} type='submit'>Log Out</button>
