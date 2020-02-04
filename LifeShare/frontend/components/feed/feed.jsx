@@ -4,7 +4,7 @@ class Feed extends React.Component {
     render (){
         return (
             <div>
-                <img className='construction' src='assets/webconstruction.png'></img>
+                <img className='construction' src={ window.constructionURL }></img>
             </div>
         )
     }
