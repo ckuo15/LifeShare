@@ -14,6 +14,14 @@
  *= require_self
  */
 
+ .construction {
+   margin-top: 72px;
+ }
+
+ html {
+   height: 1000px;
+ }
+
  html, body, header, h1, p, div, span, input, textarea,a {
   margin: 0;
   padding: 0;
@@ -301,6 +309,7 @@
     width: 100%;
     position: fixed;
     top: 0;
+    background: white;
 }
 
 .left-icons {
@@ -463,10 +472,6 @@
   margin-bottom: 50px;
 }
 
-.profile-description p {
-  margin-top: 20px;
-}
-
 .profile-picture {
   height: 200px;
 }
@@ -482,13 +487,21 @@
 }
 .middle-container {
   display:flex;
-  margin-top: 72px;
+  margin-top: 73px;
   justify-content: center; 
   align-items: center;
 }
 
 .username {
   font-weight: bold;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.bio {
+  margin-top: 15px;
+  font-size: 18px;
+  white-space: pre-line;  
 }
 
 .uploadModal {
@@ -616,6 +629,7 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
+  align-content: center;
   /* margin-right: 450px;
   margin-top: 80px; */
 }
@@ -636,10 +650,6 @@
 
 .leftForm {
   width: 200px;
-  /* margin: 20px;
-  margin-right: 100px;
-  margin-top: 150px;
-  margin-left: 30px; */
 }
 
 .leftForm p {
@@ -663,8 +673,9 @@
   padding: 10px;
   background: #FAFAFA;
   resize: none;
-  height: 100px;
+  height: 70px;
   width: 200px;
+  overflow: hidden;
 }
 
 .namebox {
@@ -678,3 +689,24 @@
   width: 100px;
 }
 
+#file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.preview-image {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.inputfile {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-content: center;
+  color: rgb(46, 146, 240);
+  margin-top: 5px;
+}

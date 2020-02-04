@@ -13,7 +13,7 @@ class Api::PostsController < ApplicationController
     end 
 
     def show
-        
+        Post.find_by(params[:id])
     end
 
     def index
@@ -26,11 +26,7 @@ class Api::PostsController < ApplicationController
 
     private
 
-    def selected_post
-        Post.find_by(params[:id])
-    end 
-
     def post_params
-        params.require(:post).permit(:caption, :user_id)
+        params.require(:post).permit(:caption, :user_id, :photo)
     end 
 end

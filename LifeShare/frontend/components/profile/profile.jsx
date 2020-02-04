@@ -1,5 +1,7 @@
 import React from 'react';
-import NavBar from '../navbar/navbar';
+import NavBarContainer from '../navbar/navbar_container';
+import FormContainer from '../form/form_container';
+
 
 class Profile extends React.Component {
 
@@ -8,7 +10,20 @@ class Profile extends React.Component {
         this.state = { show: false }
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        // this.handleUpdate = this.handleUpdate.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    componentDidMount() {
+        this.props.fetchUser(this.props.match.params.userId)
+    };
+
+    componentDidUpdate(prevProps) {
+        if ( prevProps.match.params.userId !== this.props.match.params.userId){
+            this.props.fetchUser(this.props.match.params.userId)
+        }
+    };
 
     showModal(e) {
         e.preventDefault();
@@ -16,43 +31,67 @@ class Profile extends React.Component {
     };
 
     hideModal(e) {
-        e.preventDefault();
         if (e.target.className === 'profileEditModal'){
             this.setState( { show: false })
         }
     };
 
+    closeModal(){
+        this.setState( {show: false })
+    };
+
+    // handleUpdate(field){
+    //     return (e) => {
+    //         this.setState({ [field]: e.currentTarget.value })
+    //     }
+    // };
+
+    // handleSubmit(e){
+    //     e.preventDefault();
+    //     const user = { 
+    //         id: this.props.user.id,
+    //         fullname: this.state.fullname,
+    //         bio: this.state.bio
+    //     };
+
+    //     this.props.updateUser(user).then( () => this.setState( { show: false }))
+    // };
+
     render () {
-        const form = (
-            <div onClick={ this.hideModal } className='profileEditModal'>
-                <form className='editForm'>
-                    <h1>Edit Profile</h1>
-                    <div className='leftForm'>
-                        <img className='profileimage' src={ window.puppyURL }/>
-                        <p>Change Profile Picture</p>
-                    </div>
-                    <div className='rightForm'>
-                        <h1>Name: </h1>
-                        <input type='text' className='namebox' placeholder='Name'/>
-                        <h1>Bio: </h1>
-                        <textarea rows="5" cols="8" className='biobox' placeholder='Type your bio here'></textarea>
-                        <button>Update</button>
-                    </div>
-                </form>
-            </div>
-        )
+        if (!this.props.user){return null};
+        // const form = (
+        //     <div onClick={ this.hideModal } className='profileEditModal'>
+        //         <div className='editForm'>
+        //             <h1>Edit Profile</h1>
+        //             <div className='leftForm'>
+        //                 <img className='profileimage' src={ window.puppyURL }/>
+        //                 <FormContainer />
+        //             </div>
+        //             <div className='rightForm'>
+        //                 <h1>Name: </h1>
+        //                 <input onChange={ this.handleUpdate('fullname') } type='text' className='namebox' value={this.state.fullname}/>
+        //                 <h1>Bio: </h1>
+        //                 <textarea onChange={ this.handleUpdate('bio') } rows="5" cols="8" className='biobox' value={ this.state.bio } placeholder='Please type your bio here'></textarea>
+        //                 <button onClick={this.handleSubmit}>Update</button>
+        //             </div>
+        //         </div>
+        //     </div>
+        // )
+        const editButton = <button onClick={this.showModal} className='editprofile-button'>Edit Profile</button>;
+        const showButton = (this.props.currentUser.id == this.props.match.params.userId) ? editButton : null;
+        const photoUrl = this.props.user.photoUrl ? this.props.user.photoUrl : window.defaultPicURL;
         return (
         <div>
-            <NavBar />
-            { this.state.show && form }
+            <NavBarContainer />
+            { this.state.show && <FormContainer closeModal={ this.closeModal } hideModal={ this.hideModal }/> }
             <div className='middle-container'>
                 <div className='profile-picture'>
-                    <img src={ window.puppyURL }/>
+                    <img src={ photoUrl }/>
                 </div>
                 <div className='profile-header'>
                     <div className='profile-description'>
-                        <p className='username'>Hero</p>
-                        <p>I'm a fun, energetic good boy that loves to chase squirrels!</p>
+                        <p className='username'>{this.props.user.fullname.split(" ")[0]}</p>
+                        <p className='bio'>{ this.props.user.bio }</p>
                     </div>
                     <div className='user-stats'>
                         <span>3 posts</span>
@@ -60,8 +99,9 @@ class Profile extends React.Component {
                         <span>98 following</span>
                     </div>
                     <div className='top-row-description'>
-                        <h1>goodboi88</h1>
-                        <button onClick={ this.showModal } className='editprofile-button'>Edit Profile</button>
+                        <h1>{this.props.user.username}</h1>
+                        {/* <button onClick={ this.showModal } className='editprofile-button'>Edit Profile</button> */}
+                        { showButton }
                     </div>
                 </div>
             </div>
