@@ -7,10 +7,33 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = { show: false };
+        this.state = { 
+            show: false,
+            photoFile: null,
+            photoUrl: null,
+            caption: ''
+        };
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
+        this.handleSubmitForm = this.handleSubmitForm.bind(this);
+        this.handleCaption = this.handleCaption.bind(this);
     }
+
+    handleFile(e) {
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+
+            this.setState({ photoFile: file, photoUrl: fileReader.result });
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
+
+    closeModal(){
+        this.setState( { show: false })
+    };
 
     showModal(e) {
         e.preventDefault();
@@ -18,7 +41,6 @@ class NavBar extends React.Component {
     };
 
     hideModal(e){
-        e.preventDefault();
         if ( e.target.className === 'uploadModal'){
             this.setState({ show: false })
         }
@@ -29,18 +51,36 @@ class NavBar extends React.Component {
         this.props.processForm();
     };
 
+    handleSubmitForm(e) {
+        e.preventDefault();
+        const formData = new FormData(); //need this to store photo
+        if (this.state.photoFile) {
+            formData.append('post[photo]', this.state.photoFile);
+        }
+        formData.append('post[caption]', this.state.caption);
+        this.props.createPost(formData);
+    }
+
+    handleCaption(field){
+        return e => {
+            this.setState({ [field]: e.currentTarget.value })
+        };
+    }
+
     render (){
         const form = (
             <div onClick= { this.hideModal } className='uploadModal'>
-                <form className='uploadForm'>
+                <form className="uploadForm" onSubmit={this.handleSubmitPic}>
                     <div className='leftsideForm'>
-                        <img className='postimage' src={ window.uploadimageURL }/>
+                        <input type="file" id="upload" onChange={this.handleFile.bind(this)} />
+                        <label className='uploadfile' htmlFor="upload">Upload Post</label>
+                        <img className='postimage' src={window.uploadimageURL} />
                         <p>Upload image</p>
                     </div>
                     <div className='rightsideForm'>
                         <h1>Caption:</h1>
-                        <textarea rows="5" cols="15" className='captionbox' placeholder='Type your caption here'></textarea>
-                        <button className='captionSubmit'>Submit</button>
+                        <textarea onChange={ this.handleCaption('caption') } rows="5" cols="15" className='captionbox' placeholder='Type your caption here'></textarea>
+                        <button onClick={ this.handleSubmitForm} className='captionSubmit'>Submit</button>
                     </div>
                 </form>
             </div>

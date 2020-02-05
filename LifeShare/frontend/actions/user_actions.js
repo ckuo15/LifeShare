@@ -14,3 +14,6 @@ export const fetchUser = (userId) => dispatch => {
 export const updateUser = (formData, sessionId) => dispatch => {
     return UserAPIUtil.updateUser(formData,sessionId).then((user) => dispatch(receiveUser(user)))
 };
+
+// goes to jbuilder to get the user (goes to .then)
+// left side always function, right side POJO

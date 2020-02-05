@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from '../navbar/navbar_container';
 import FormContainer from '../form/form_container';
+import PostIndexContainer from '../posts/post_index_container';
 
 
 class Profile extends React.Component {
@@ -111,6 +112,7 @@ class Profile extends React.Component {
                     <span>POSTS</span>
                 </div>
             </div>
+            <PostIndexContainer/>
         </div>
         )
     }

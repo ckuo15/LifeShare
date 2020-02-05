@@ -43,7 +43,7 @@ export default class Form extends React.Component {
         e.preventDefault();
         const formData = new FormData();
         if (this.state.photoFile) {
-            formData.append('user[photo]', this.state.photoFile);
+            formData.append('user[photo]', this.state.photoFile); //key, value
         }
 
         formData.append('user[fullname]', this.state.fullname);
