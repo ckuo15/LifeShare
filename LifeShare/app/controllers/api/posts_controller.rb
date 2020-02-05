@@ -1,8 +1,9 @@
 class Api::PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
-        if @post.save 
-            render json: @post
+        @post[:user_id] = current_user.id
+        if @post.save!
+            render :show #show.json.builder
         else
              render json: @post.errors.full_messages, status: 401
         end 

@@ -12,8 +12,3 @@ const mDTP = dispatch => ({
 });
 
 export default connect(mSTP,mDTP)(Profile);
-
-// to do list:
-// make edit profile only appear to currentUser. if it matches params userId
-// pre filled info
-// update method in user controller, update in routes as well.
