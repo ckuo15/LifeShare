@@ -17,6 +17,7 @@ class NavBar extends React.Component {
         this.hideModal = this.hideModal.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
         this.handleCaption = this.handleCaption.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     handleFile(e) {
@@ -58,7 +59,7 @@ class NavBar extends React.Component {
             formData.append('post[photo]', this.state.photoFile);
         }
         formData.append('post[caption]', this.state.caption);
-        this.props.createPost(formData);
+        this.props.createPost(formData).then(() => this.closeModal());
     }
 
     handleCaption(field){
@@ -68,14 +69,15 @@ class NavBar extends React.Component {
     }
 
     render (){
+        const preview = this.state.photoUrl ? <img className='preview-post' src={this.state.photoUrl} /> : <img className='postimage' src={window.uploadimageURL} />;
+
         const form = (
             <div onClick= { this.hideModal } className='uploadModal'>
                 <form className="uploadForm" onSubmit={this.handleSubmitPic}>
                     <div className='leftsideForm'>
+                        { preview }
                         <input type="file" id="upload" onChange={this.handleFile.bind(this)} />
-                        <label className='uploadfile' htmlFor="upload">Upload Post</label>
-                        <img className='postimage' src={window.uploadimageURL} />
-                        <p>Upload image</p>
+                        <label className='uploadfile' htmlFor="upload">Upload Image</label>
                     </div>
                     <div className='rightsideForm'>
                         <h1>Caption:</h1>

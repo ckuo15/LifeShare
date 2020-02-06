@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
 import Form from './form';
 import { fetchUser, updateUser } from '../../actions/user_actions';
 

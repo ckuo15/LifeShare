@@ -54,7 +54,7 @@ export default class Form extends React.Component {
     }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         const preview = this.state.photoUrl ? <img className='preview-image' src={this.state.photoUrl} /> : <img className='profileimage' src={window.defaultPicURL} />;
         return(
             <div onClick={this.props.hideModal} className='profileEditModal'>

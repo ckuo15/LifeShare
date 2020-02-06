@@ -8,6 +8,10 @@ class User < ApplicationRecord
 
     has_one_attached :photo
 
+    has_many :posts,
+    foreign_key: :user_id,
+    class_name: :Post
+
     def self.generate_session_token
         SecureRandom.urlsafe_base64(16)
     end
