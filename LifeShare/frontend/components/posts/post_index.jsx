@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIndexItem from './post_index_item';
+import PostIndexItemContainer from './post_index_item_container';
 import { Link } from 'react-router-dom';
 
 
@@ -15,9 +15,9 @@ class PostIndex extends React.Component {
 
     render(){
         return (
-            <div>
-                <ul>
-                    {this.props.posts.map(post => <PostIndexItem key={post.id} post = { post } />)}
+            <div className='post-container'>
+                <ul className='list'>
+                    {this.props.posts.map(post => <PostIndexItemContainer key={post.id} post = { post } />)}
                 </ul>
             </div>
         )
