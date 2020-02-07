@@ -33,26 +33,25 @@ Profile Page Image:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/profile_page.png)
 
+Edit Profile Information:
+
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/profile_page.png)
+
+Create Post Modal:
+
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/upload_modal.png)
 
 
+Individual Post View:
+
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/post_show_modal.png)
+
+Edit Post Dropdown:
+
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/edit_dropdown.png)
+
+Edit Caption Modal:
+
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/edit_caption_modal.png)
 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
