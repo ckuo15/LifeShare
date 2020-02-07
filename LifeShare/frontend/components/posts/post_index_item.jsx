@@ -30,6 +30,7 @@ class PostIndexItem extends React.Component {
     };
     
     showEditModal(e){
+        debugger;
         e.preventDefault();
         this.setState({ editShow: true })
     }
@@ -83,6 +84,12 @@ class PostIndexItem extends React.Component {
                 </li>
             </ul>
         )
+        const dot = (
+            <div className='dots'>
+                <img onClick={e => this.setState({ dotShow: true })} className='moreicon' src={window.moreiconURL} />
+                {this.state.dotShow && dotsmenu}
+            </div>
+        );
         const postModal = (
             <div onClick={ this.hideModal } className='postshowModal'>
                 <form className='postshowForm'>
@@ -95,10 +102,11 @@ class PostIndexItem extends React.Component {
                                 <img className='profilepicshow' src={ profilepicUrl }/>
                                 <span className='usernameshow'>{this.props.user.username}</span>
                             </div>
-                            <div className='dots'>
+                            {/* <div className='dots'>
                                 <img onClick={ e => this.setState({ dotShow: true })}className='moreicon' src={window.moreiconURL}/>
                                 { this.state.dotShow && dotsmenu }
-                            </div>
+                            </div> */}
+                            { this.props.user.id === this.props.currentUserId && dot }
                         </div>
                         <div className='comments'>
                             <div className='userblock'> 
