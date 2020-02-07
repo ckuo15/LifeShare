@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SignupForm from './signup_form';
-import { signup } from '../../actions/session_actions';
+import { signup, login } from '../../actions/session_actions';
 import { clearSessionErrors } from '../../actions/session_actions';
 
 const mSTP = ( { errors }) => {
@@ -16,6 +16,7 @@ const mSTP = ( { errors }) => {
 const mDTP = dispatch => {
     return {
         processForm: user => dispatch(signup(user)),
+        processLogin: (user) => dispatch(login(user)),
         clearErrors: () => dispatch(clearSessionErrors())
     };
 };

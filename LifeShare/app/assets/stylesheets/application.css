@@ -258,8 +258,8 @@
   padding: 5px;
   width: 255px;
   font-size: 15px;
-  margin-top: 5px;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -270,8 +270,8 @@
   padding: 5px;
   width: 255px;
   font-size: 15px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin-top: 9px;
+  margin-bottom: 10px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -388,6 +388,12 @@
 .errors {
   color: #ED4956;
   list-style-type: circle;
+}
+
+.signup li {
+  color: #ED4956;
+  list-style-type: circle;
+  margin-left: 50px;
 }
 
 .profile-middleline {
@@ -1014,3 +1020,41 @@
   font-size: 15px;
   cursor: pointer;
 }
+
+/* demo */
+
+.demo-login-button-splash {
+    background: rgb(81, 206, 108);
+    color: white;
+    padding: 5px;
+    width: 255px;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.demo-login-button-signup {
+  background: rgb(81, 206, 108);
+  color: white;
+  padding: 5px;
+  width: 255px;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.demo-login-button-login {
+  background: rgb(81, 206, 108);
+  color: white;
+  padding: 5px;
+  width: 255px;
+  font-size: 15px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+

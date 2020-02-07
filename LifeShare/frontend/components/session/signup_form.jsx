@@ -12,6 +12,7 @@ class SignupForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.loginDemonUser = this.loginDemonUser.bind(this);
     }
 
     handleSubmit(e) {
@@ -20,13 +21,22 @@ class SignupForm extends React.Component {
         this.props.processForm(user);
     }
 
+    loginDemonUser(e){
+        e.preventDefault();
+        const user= {
+            username: 'goodboi88',
+            password: 'hunter12'
+        }
+        this.props.processLogin(user);
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
     renderErrors() {
         return (
-            <ul className='errors'>
+            <ul className='errors signup'>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -52,6 +62,9 @@ class SignupForm extends React.Component {
                             <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />
                             <button type='submit'>Sign Up</button>
                         </div>
+                        <div className='demo-signup'>
+                            <button className='demo-login-button-signup' onClick={ this.loginDemonUser }>Demo Login</button>
+                        </div>
                     </form>
                     <div className='splash-ask'>
                         <p>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
@@ -72,6 +85,9 @@ class SignupForm extends React.Component {
                                 <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username' />
                                 <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password' />
                                 <button type='submit'>Sign Up</button>
+                            </div>
+                            <div className='demo-signup'>
+                                <button className='demo-login-button-splash' onClick={this.loginDemonUser}>Demo Login</button>
                             </div>
                         </form>
                         <div className='splash-ask'>

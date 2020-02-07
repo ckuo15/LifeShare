@@ -10,11 +10,21 @@ class LoginForm extends React.Component {
             email: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.loginDemonUser = this.loginDemonUser.bind(this);
     }
 
     handleSubmit(e){
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        this.props.processForm(user);
+    };
+
+    loginDemonUser(e) {
+        e.preventDefault();
+        const user = {
+            username: 'goodboi88',
+            password: 'hunter12'
+        }
         this.props.processForm(user);
     };
 
@@ -47,6 +57,9 @@ class LoginForm extends React.Component {
                             <input type='text' value={this.state.username} onChange={this.update('username')} placeholder='Username'/>
                             <input type='password' value={this.state.password} onChange={this.update('password')} placeholder='Password'/>
                             <button type='submit'>Log In</button>
+                        </div>
+                        <div className='demo-login'>
+                            <button className='demo-login-button-login' onClick={this.loginDemonUser}>Demo Login</button>
                         </div>
                     </form>
                     <div className='splash-login-ask'>
