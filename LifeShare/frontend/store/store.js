@@ -8,3 +8,6 @@ const configureStore = (preloadedState={}) => (
 );
 
 export default configureStore;
+
+
+// take logger out when youre done
