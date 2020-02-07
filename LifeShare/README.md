@@ -25,9 +25,15 @@
 
 ## Demo Images:
 
-Splash Image Animation Image 1: 
+Splash Image Animation Image: 
 
-![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/splash_page.png "Logo Title Text 1")
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/splash_page.png)
+
+Profile Page Image:
+
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/profile_page.png)
+
+
 
 
 
