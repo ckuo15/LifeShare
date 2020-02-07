@@ -5,15 +5,15 @@
 
 ## Technologies:
 
-    1. Ruby on Rails
-    2. PostgreSQL
-    3. JavaScript
-    4. React
-    5. Redux
-    6. BCrypt
-    7. HTML 5
-    8. CSS 3
-    9. jQuery
+    1.  Ruby on Rails
+    2.  PostgreSQL
+    3.  JavaScript
+    4.  React
+    5.  Redux
+    6.  BCrypt
+    7.  HTML 5
+    8.  CSS 3
+    9.  jQuery
     10. AWS S3
 
 ## Features:
@@ -35,7 +35,7 @@ Profile Page Image:
 
 Edit Profile Information:
 
-![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/profile_page.png)
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/update_profile_modal.png)
 
 Create Post Modal:
 
