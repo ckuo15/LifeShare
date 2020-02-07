@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
 import PostIndex from './post_index';
 import { requestPosts, fetchPost, createPost } from '../../actions/post_actions';
+import { withRouter } from 'react-router-dom';
 
 const mSTP = (state) => ({
-    posts: Object.values(state.posts),
+    posts: Object.values(state.posts)
+
 });
 
 const mDTP = dispatch => ({
-    requestPosts: () => dispatch(requestPosts()) // refers to the action
+    requestPosts: (userId) => dispatch(requestPosts(userId)) // refers to the action
     // updatePost: post => dispatch(updatePost(post)),
     // deletePost: postId => dispatch(deletePost(postId))
 });
 
-export default connect(mSTP, mDTP)(PostIndex);
+export default withRouter(connect(mSTP, mDTP)(PostIndex));
 
 
 // state.entities.users[ownProps.match.params.userId].posts
