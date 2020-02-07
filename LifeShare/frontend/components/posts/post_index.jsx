@@ -10,14 +10,16 @@ class PostIndex extends React.Component {
     };
 
     componentDidMount() {
-        this.props.requestPosts(); //actions that is in the container
+        this.props.requestPosts(this.props.match.params.userId); //actions that is in the container
     }
+    // need componentdidupdate so the state changes when you change the URL.
+    // state will remain the same until you refresh
 
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.match.params.userId !== this.props.match.params.userId) {
-    //         this.props.fetchUser(this.props.match.params.userId)
-    //     }
-    // };
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.userId !== this.props.match.params.userId) {
+            this.props.requestPosts(this.props.match.params.userId)
+        }
+    };
 
     render(){
         return (

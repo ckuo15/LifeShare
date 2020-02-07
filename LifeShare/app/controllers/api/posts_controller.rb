@@ -23,7 +23,9 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        @posts = current_user.posts
+        user = User.find(params[:user_id])
+        @posts = user.posts
+        render :index
     end 
 
     def destroy
