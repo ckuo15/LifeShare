@@ -13,6 +13,12 @@ class PostIndex extends React.Component {
         this.props.requestPosts(); //actions that is in the container
     }
 
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.match.params.userId !== this.props.match.params.userId) {
+    //         this.props.fetchUser(this.props.match.params.userId)
+    //     }
+    // };
+
     render(){
         return (
             <div className='post-container'>
