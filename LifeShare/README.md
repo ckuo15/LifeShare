@@ -25,32 +25,32 @@
 
 ## Demo Images:
 
-Splash Image Animation Image: 
+### Splash Image Animation Image: 
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/splash-page.png)
 
-Profile Page Image:
+### Profile Page Image:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/profile_page.png)
 
-Edit Profile Information:
+### Edit Profile Information:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/update_profile_modal.png)
 
-Create Post Modal:
+### Create Post Modal:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/upload_modal.png)
 
 
-Individual Post View:
+### Individual Post View:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/post_show_modal.png)
 
-Edit Post Dropdown:
+### Edit Post Dropdown:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/edit_dropdown.png)
 
-Edit Caption Modal:
+### Edit Caption Modal:
 
 ![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/edit_caption_modal.png)
 
