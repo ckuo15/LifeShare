@@ -4,7 +4,8 @@ import { fetchPosts, requestPost, updatePost, deletePost } from '../../actions/p
 import { withRouter } from 'react-router-dom';
 
 const mSTP = (state, ownProps) => ({
-    user: state.entities.users[ownProps.match.params.userId]
+    user: state.entities.users[ownProps.match.params.userId],
+    currentUserId: state.session.id
 });
 
 const mDTP = dispatch => ({
