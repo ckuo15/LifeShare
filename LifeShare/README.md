@@ -27,7 +27,7 @@
 
 Splash Image Animation Image: 
 
-![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/splash_page.png)
+![](https://github.com/ckuo15/LifeShare/blob/master/LifeShare/app/assets/images/splash-page.png)
 
 Profile Page Image:
 
