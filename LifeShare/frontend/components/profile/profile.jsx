@@ -95,9 +95,9 @@ class Profile extends React.Component {
                         <p className='bio'>{ this.props.user.bio }</p>
                     </div>
                     <div className='user-stats'>
-                        <span>3 posts</span>
-                        <span>16895 followers</span>
-                        <span>98 following</span>
+                        <span>{this.props.user.posts.length} posts</span>
+                        {/* <span>16895 followers</span> */}
+                        {/* <span>98 following</span> */}
                     </div>
                     <div className='top-row-description'>
                         <h1>{this.props.user.username}</h1>

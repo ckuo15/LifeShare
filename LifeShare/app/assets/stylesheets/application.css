@@ -16,13 +16,14 @@
 
  .construction {
    margin-top: 72px;
+   background-size: 100%;
  }
 
  html {
    height: 1000px;
  }
 
- html, body, header, h1, p, div, span, input, textarea,a {
+ html, body, header, h1, p, div, span, input, textarea,a, li, ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -750,7 +751,6 @@
   justify-content: center;
   width: 1000px;
   flex-wrap: wrap;
-  margin-right: 30px;
 }
 
 .post-container {
@@ -770,6 +770,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .postshowForm {
@@ -794,6 +795,12 @@
   display: flex;
   position: fixed;
   width: 320px;
+  justify-content: space-between;
+}
+
+.picusername {
+  display: flex;
+  align-items: center;
 }
 
 .profilepicshow {
@@ -804,16 +811,121 @@
   object-fit: cover;
 }
 
+
+.dots {
+  position: relative;
+}
+
+.dotsmenu {
+  width: 150px;
+  height: 115px;
+  position: absolute;
+  right: 8px;
+  top: 40px;
+  list-style-type: none;
+  padding: 0;
+  background-color: white;
+  border: 1px solid #F5F6F7;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgb(103, 172, 241);
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+
+.dotsmenu li:nth-child(2) {
+  border-bottom: 1px solid #DBDBDB;
+  text-align: center;
+  padding: 10px;
+}
+
+.dotsmenu li:nth-child(2):hover {
+  border-bottom: 1px solid #DBDBDB;
+  text-align: center;
+  padding: 10px;
+  background: rgb(218, 216, 216);
+  cursor: pointer;
+}
+
+.dotsmenu li:nth-child(3) {
+  border-bottom: 1px solid #DBDBDB;
+  text-align: center;
+  padding: 10px;
+}
+
+.dotsmenu li:nth-child(3):hover {
+  border-bottom: 1px solid #DBDBDB;
+  text-align: center;
+  padding: 10px;
+  background: rgb(218, 216, 216);
+  cursor: pointer;
+}
+
+.dotsmenu li:nth-child(4) {
+  text-align: center;
+  padding: 10px;
+  color: red;
+}
+
+.dotsmenu li:nth-child(4):hover {
+  text-align: center;
+  padding: 10px;
+  color: red;
+  background: rgb(218, 216, 216);
+  cursor: pointer;
+}
+
 .usernameshow {
   font-weight: bold;
-  margin-top: 20px;
+}
+
+
+.moreicon {
+  height: 13px;
+  width: 13px;
+  margin-top: 23px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .comments {
   border-bottom: 1px solid #DBDBDB;
-  height: 410px;
+  height: 350px;
   width: 320px;
-  
+  margin-top: 60px;
+  display: flex;
+}
+
+.userblock {
+  display: flex;
+}
+
+.profilepiccaption{
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  padding: 15px;
+  object-fit: cover;
+}
+
+.usernamecaption {
+  width: 230px;
+  margin-top: 18px;
+}
+
+.usernamedisplay {
+  font-weight: bold;
+}
+
+.caption {
+  margin-left: 7px;
 }
 
 .heartscomments {
@@ -852,4 +964,53 @@
   width: 24px;
   margin-left: 5px;
   margin-bottom: 2px;
+}
+
+.editModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(51, 51, 51, 0.651);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.captionEditForm {
+  background: white;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.editheader {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.captioneditbox {
+  border: 1px solid black;
+  resize: none;
+  height: 100px;
+  width: 200px;
+}
+
+.captionEditSubmit {
+  height: 30px;
+  width: 90px;
+  background: rgb(85, 150, 235);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
 }

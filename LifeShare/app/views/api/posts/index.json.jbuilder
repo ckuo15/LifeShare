@@ -1,6 +1,6 @@
 @posts.each do |post|
     json.set! post.id do 
-        json.extract! post, :caption, :user_id, :created_at
+        json.extract! post, :caption, :user_id, :created_at, :id
         if post.photo.attached?
             json.photoUrl url_for(post.photo) #if no photo in the post, jbuilder will break. this is why WE NEED TO CHECK!!!!!
         end 

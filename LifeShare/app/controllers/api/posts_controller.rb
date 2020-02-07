@@ -10,7 +10,12 @@ class Api::PostsController < ApplicationController
     end
 
     def update
-        # for update(edit) just include an edit page
+        @post = current_user.posts.find(params[:id])
+        if @post.update(post_params)
+            render :show
+        else 
+            render json: @post.errors.full_messages, status: 401
+        end 
     end 
 
     def show
@@ -18,10 +23,13 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        @posts = Post.all
+        @posts = current_user.posts
     end 
 
     def destroy
+        @post = current_user.posts.find(params[:id])
+        @post.destroy
+        render :show
     end 
 
 
