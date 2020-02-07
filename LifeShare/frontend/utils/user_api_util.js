@@ -6,6 +6,7 @@ export const fetchUser = userId => {
 };
 
 export const updateUser = (formData, sessionId) => {
+    debugger;
     return $.ajax({
         method: "PATCH",
         url: `api/users/${sessionId}`,
