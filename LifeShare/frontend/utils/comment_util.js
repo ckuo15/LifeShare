@@ -1,3 +1,9 @@
+export const fetchComments = (commentId) => {
+  return $.ajax({
+    method: "GET",
+    url: `api/posts/${commentId}`
+  })
+}
 
 export const fetchComment = commentId => {
   return $.ajax({
