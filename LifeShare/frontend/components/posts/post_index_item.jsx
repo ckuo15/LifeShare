@@ -1,5 +1,6 @@
 import React from 'react';
 import { formatDate } from '../../utils/date_util';
+import commentContainer from "../comments/comments_container";
 
 
 class PostIndexItem extends React.Component {
