@@ -11,6 +11,7 @@ json.posts do
 end
 
 json.comments do
+    
     @posts.each do |post|
         post.comments.each do |comment|
             json.set! comment.id do #key is the id, which points to the actual info
