@@ -136,12 +136,12 @@ class PostIndexItem extends React.Component {
                         </div>
                         <div className='heartscomments'>
                             <img className='heart-icon' src={ window.hearticonURL }/>
-                            <img className='comment-icon' src={window.commenticonURL} />
+                            <label htmlFor="comment-iconn"><img className='comment-icon' src={window.commenticonURL}/></label>
                             <p className='datecreated'>{formatDate(this.props.post.created_at)}</p>
                         </div>
                         <div className='addComment'>
-                            <input type='text' placeholder='Add a comment...' onChange={e => this.setState({comment: e.target.value})} value={this.state.comment}/>
-                            <p className='postbutton' onClick={this.handleComment}>Post</p>
+                            <input id="comment-iconn" type='text' placeholder='Add a comment...' onKeyDown={e => e.keyCode === 13 ? this.handleComment(e) : null} onChange={e => this.setState({comment: e.target.value})} value={this.state.comment}/>
+                            <p className='postbutton' onClick={e => this.handleComment(e)}>Post</p>
                         </div>
                     </div>
                 </form>

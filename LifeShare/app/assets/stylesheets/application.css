@@ -1016,6 +1016,11 @@
   width: 24px;
   margin-left: 5px;
   margin-bottom: 2px;
+  cursor: pointer;
+}
+
+#comment-iconn{
+  width: 250px;
 }
 
 .editModal {
