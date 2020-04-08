@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatDate } from '../../utils/date_util';
 import CommentContainer from "../comments/comments_container";
-
+import { Link } from 'react-router-dom';
 
 class PostIndexItem extends React.Component {
     constructor(props){
@@ -112,7 +112,9 @@ class PostIndexItem extends React.Component {
                         <div className='postshow-cred'>
                             <div className='picusername'>
                                 <img className='profilepicshow' src={ profilepicUrl }/>
-                                <span className='usernameshow'>{this.props.user.username}</span>
+                                <Link to={`/user/${this.props.user.id}`}>
+                                    <span className='usernameshow'>{this.props.user.username}</span>
+                                </Link>
                             </div>
                             {/* <div className='dots'>
                                 <img onClick={ e => this.setState({ dotShow: true })}className='moreicon' src={window.moreiconURL}/>
@@ -124,7 +126,9 @@ class PostIndexItem extends React.Component {
                             <div className='userblock'> 
                                 <img className='profilepiccaption' src={profilepicUrl} />
                                 <div className='usernamecaption'>
-                                    <span className='usernamedisplay'>{this.props.user.username}</span>
+                                    <Link to={`/user/${this.props.user.id}`}>
+                                        <span className='usernamedisplay'>{this.props.user.username}</span>
+                                    </Link>
                                     <span className='caption'>{this.props.post.caption}</span>
                                 </div>
                             </div>

@@ -18,7 +18,9 @@ class CommentIndex extends React.Component {
           <div className="comment-section">
             <img className="comment-profile-pic" src={comment.user.photoUrl}/>
             <div className="comment-combo">
-              <span className="comment-username">{comment.user.username}</span>
+              <Link to={`/user/${comment.user.id}`}>
+                <span className="comment-username">{comment.user.username}</span>
+              </Link>
               <span className="comment-body">{comment.body}</span>
             </div>
           </div>

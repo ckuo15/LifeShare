@@ -5,6 +5,7 @@ const CommentsReducer = (state={}, action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_POSTS:
+      if (!action.payload.comments) return {};
       return action.payload.comments;
     case RECEIVE_COMMENT:
       return Object.assign({}, state, {[action.comment.id]: action.comment})

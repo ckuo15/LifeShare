@@ -100,7 +100,7 @@ class Profile extends React.Component {
                         {/* <span>98 following</span> */}
                     </div>
                     <div className='top-row-description'>
-                        <h1>{this.props.user.username}</h1>
+                        <h1 className='profile-username'>{this.props.user.username}</h1>
                         {/* <button onClick={ this.showModal } className='editprofile-button'>Edit Profile</button> */}
                         { showButton }
                     </div>

@@ -355,6 +355,10 @@
   display: flex;
 }
 
+.profile-username{
+  cursor: default;
+}
+
 .addimage-icon {
   height: 27px;
   width: 27px;
@@ -460,6 +464,7 @@
 .user-stats {
   padding: 3px;
   margin-top: 30px;
+  cursor: default;
 }
 
 .user-stats p {
@@ -503,12 +508,14 @@
   font-weight: bold;
   margin-top: 15px;
   font-size: 25px;
+  cursor: default;
 }
 
 .bio {
   margin-top: 15px;
   font-size: 18px;
   white-space: pre-line;  
+  cursor: default;
 }
 
 .uploadModal {
@@ -932,7 +939,7 @@
 }
 
 .comment-username{
-  margin-right: 10px;
+  margin-right: 8px;
   font-weight: bold;
 }
 
@@ -997,6 +1004,7 @@
   /* margin-left: 90px; */
   color: #3897EE;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .heart-icon {

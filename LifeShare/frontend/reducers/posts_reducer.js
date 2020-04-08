@@ -6,6 +6,7 @@ const PostsReducer = (state={}, action) => {
     let newState;
     switch (action.type) {
         case RECEIVE_POSTS:
+            if (!action.payload.posts) return {};
             return action.payload.posts; //NO MERGING
         case RECEIVE_POST:
             return Object.assign({}, state, { [action.post.id]: action.post })
