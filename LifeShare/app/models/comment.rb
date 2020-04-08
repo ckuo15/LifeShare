@@ -5,5 +5,5 @@ class Comment < ApplicationRecord
 
   belongs_to :post,
   foreign_key: :post_id,
-  class_name: Post
+  class_name: :Post
 end

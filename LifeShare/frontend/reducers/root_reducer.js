@@ -4,6 +4,7 @@ import entitiesReducer from './entities_reducer';
 import errorsReducer from './errors_reducer';
 import postsReducer from './posts_reducer';
 import usersReducer from './users_reducer';
+import comments from './comments_reducer';
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     errors: errorsReducer,
     entities: entitiesReducer,
     posts: postsReducer,
-    users: usersReducer
+    users: usersReducer,
+    comments
 });
 
 export default rootReducer;

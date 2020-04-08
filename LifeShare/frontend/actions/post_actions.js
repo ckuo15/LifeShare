@@ -5,9 +5,9 @@ export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const RECEIVE_POST = 'RECEIVE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
 
-const receivePosts = (posts) => ({
+const receivePosts = (payload) => ({
     type: RECEIVE_POSTS,
-    posts
+    payload
 });
 
 const receivePost = post => ({

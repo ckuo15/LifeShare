@@ -904,26 +904,64 @@
 .comments {
   border-bottom: 1px solid #DBDBDB;
   height: 350px;
-  width: 320px;
+  width: 290px;
   margin-top: 60px;
   display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0 15px;
 }
+
+.single-comment{
+  margin-bottom: 10px;
+}
+
+.comment-section{
+  display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* margin-left: 15px; */
+}
+
+.comment-profile-pic{
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.comment-username{
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.comment-body{
+  word-break: break-all;
+}
+
+.comment-combo{
+  margin-top: 5px;
+}
+
 
 .userblock {
   display: flex;
+  margin: 10px 0;
+
 }
 
 .profilepiccaption{
   height: 30px;
   width: 30px;
   border-radius: 50px;
-  padding: 15px;
+  margin-right: 15px;
   object-fit: cover;
 }
 
 .usernamecaption {
   width: 230px;
-  margin-top: 18px;
+  word-break: break-all;
 }
 
 .usernamedisplay {
