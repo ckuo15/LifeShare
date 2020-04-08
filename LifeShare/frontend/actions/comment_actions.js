@@ -28,7 +28,7 @@ export const requestComment = commentId => dispatch => (
 );
 
 export const createComment = comment => dispatch => (
-  CommentAPIUtil.createComment(comment).then(comment => dispatch(receiveComment(comment)))
+  CommentAPIUtil.createComment(comment).then(comment => dispatch(receiveComment(comment))) //.then gets from jbuilder
 );
 
 export const deleteComment = commentId => dispatch(

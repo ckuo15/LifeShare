@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatDate } from '../../utils/date_util';
-import commentContainer from "../comments/comments_container";
+import CommentContainer from "../comments/comments_container";
 
 
 class PostIndexItem extends React.Component {
@@ -10,7 +10,8 @@ class PostIndexItem extends React.Component {
             show: false,
             dotShow: false,
             editShow: false,
-            caption: this.props.post.caption
+            caption: this.props.post.caption,
+            comment: ''
          };
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
@@ -19,6 +20,7 @@ class PostIndexItem extends React.Component {
         this.handleCaption = this.handleCaption.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.handleComment = this.handleComment.bind(this);
     }
 
     showModal(e){
@@ -31,7 +33,6 @@ class PostIndexItem extends React.Component {
     };
     
     showEditModal(e){
-        debugger;
         e.preventDefault();
         this.setState({ editShow: true })
     }
@@ -67,6 +68,16 @@ class PostIndexItem extends React.Component {
         // formData.append('post[caption]', this.state.caption);
         this.props.updatePost({caption: this.state.caption, id: this.props.post.id}).then(() => this.closeModal());
     };
+
+    handleComment(){
+        if (this.state.comment === '') return;
+        this.props.createComment({
+            body: this.state.comment,
+            post_id: this.props.post.id
+        }).then(() => {
+            this.setState({comment: ''})
+        });
+    }
 
     render(){
         const profilepicUrl = this.props.user.photoUrl ? this.props.user.photoUrl : window.defaultPicURL;
@@ -117,6 +128,7 @@ class PostIndexItem extends React.Component {
                                     <span className='caption'>{this.props.post.caption}</span>
                                 </div>
                             </div>
+                            <CommentContainer commentIds={this.props.post.comment_ids}/>
                         </div>
                         <div className='heartscomments'>
                             <img className='heart-icon' src={ window.hearticonURL }/>
@@ -124,8 +136,8 @@ class PostIndexItem extends React.Component {
                             <p className='datecreated'>{formatDate(this.props.post.created_at)}</p>
                         </div>
                         <div className='addComment'>
-                            <input type='text' placeholder='Add a comment...'/>
-                            <p className='postbutton'>Post</p>
+                            <input type='text' placeholder='Add a comment...' onChange={e => this.setState({comment: e.target.value})} value={this.state.comment}/>
+                            <p className='postbutton' onClick={this.handleComment}>Post</p>
                         </div>
                     </div>
                 </form>

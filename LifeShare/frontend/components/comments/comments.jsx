@@ -1,5 +1,4 @@
 import React from 'react';
-import commentsContainer from './comments_container';
 import { Link } from 'react-router-dom';
 
 class CommentIndex extends React.Component {
@@ -8,24 +7,28 @@ class CommentIndex extends React.Component {
     super(props)
   };
 
-  componentDidMount() {
-    this.props.requestComments(this.props.match.params.postId); 
-  }
-
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.match.params.postId !== this.props.match.params.postId) {
-      this.props.requestComments(this.props.match.params.postId)
-    }
-  };
-
   render() {
+    console.log(this.props)
+    const { comments } = this.props;
+    let comment;
+    const commentItems = this.props.commentIds.map(id => {
+      comment = comments[id]
+      return (
+        <li className="single-comment">
+          <div className="comment-section">
+            <img className="comment-profile-pic" src={comment.user.photoUrl}/>
+            <div className="comment-combo">
+              <span className="comment-username">{comment.user.username}</span>
+              <span className="comment-body">{comment.body}</span>
+            </div>
+          </div>
+        </li>
+      )
+    })
     return (
-      <div className='comment-container'>
-        <ul className='comment-list'>
-          {this.props.comments.map(comment => <commentsContainer key={comment.id} comment={comment} />)}
-        </ul>
-      </div>
+      <ul className="realcomments">
+          {commentItems}
+      </ul>
     )
   }
 };

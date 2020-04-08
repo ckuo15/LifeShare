@@ -4,12 +4,11 @@ import { requestComments, requestComment, createComment } from '../../actions/co
 import { withRouter } from 'react-router-dom';
 
 const mSTP = (state) => ({
-  comments: Object.values(state.comments)
-
+  comments: state.comments
 });
 
 const mDTP = dispatch => ({
-  requestComments: (postId) => dispatch(requestComments(postId))
+  
 });
 
 export default withRouter(connect(mSTP, mDTP)(CommentIndex));
