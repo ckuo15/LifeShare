@@ -856,12 +856,12 @@
   width: 850px;
   display: flex;
   font-family: 'Quattrocento Sans', sans-serif;
-
 }
 
 .postshow-pic {
   height: 530px;
   width: 530px;
+  object-fit: cover;
 }
 
 .right-postshow {
