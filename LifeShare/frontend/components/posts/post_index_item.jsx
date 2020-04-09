@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 class PostIndexItem extends React.Component {
     constructor(props){
+        console.log(props)
         super(props),
         this.state={ 
             show: false,
@@ -135,7 +136,7 @@ class PostIndexItem extends React.Component {
                             <CommentContainer commentIds={this.props.post.comment_ids}/>
                         </div>
                         <div className='heartscomments'>
-                            <img className='heart-icon' src={ window.hearticonURL }/>
+                            {/* <img className='heart-icon' src={ window.hearticonURL }/> */}
                             <label htmlFor="comment-iconn"><img className='comment-icon' src={window.commenticonURL}/></label>
                             <p className='datecreated'>{formatDate(this.props.post.created_at)}</p>
                         </div>
@@ -160,6 +161,13 @@ class PostIndexItem extends React.Component {
         return(
             <li key={this.props.post.id} className='post'>
                 <img onClick={ this.showModal } className='post-pic' src={ photoUrl } />
+                <div className="middle">
+                <div className="text">
+                    {/* <img className='comment-count' src={window.commenticonURL} /> */}
+                    <img className='comment-count' src={window.filledcommentURL} />
+                    <span className='comment-count-num'>{this.props.post.comment_ids.length}</span>
+                </div>
+                </div>
                 { this.state.show && postModal}
                 {this.state.editShow && editModal}
             </li>
