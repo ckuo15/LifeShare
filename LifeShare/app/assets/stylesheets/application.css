@@ -1202,11 +1202,13 @@
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .developer-title{
   font-size: 12px;
   color: #8E8E8E;
+  cursor: default;
 }
 
 .developer-pic{
@@ -1223,6 +1225,7 @@
   background: white;
   padding: 15px;
   font-size: 15px;
+  margin-top: 30px;
 }
 
 .feed-dev-links-sites{
@@ -1235,7 +1238,7 @@
 .feed-right{
   margin-left: 40px;
   margin-top: 30px;
-  width: 180px;
+  width: 210px;
 }
 
 .feed-list{
@@ -1362,6 +1365,7 @@
 .feed-dev-icons{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .fa-linkedin{
   font-size: 30px;
@@ -1394,4 +1398,29 @@
   color: rgb(180, 180, 180);
   font-size: 12px;
   margin-top: 25px;
+}
+
+.feed-dev-about{
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  background: white;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.feed-dev-aboutme{
+  font-weight: bold;
+  color: #8E8E8E;
+  margin-bottom: 20px;
+  cursor: default;
+}
+
+.about-me-description{
+  color: #0095F6;
+  margin-bottom: 5px;
+  cursor: default;
+}
+
+.about-me-description:hover{
+  text-decoration: underline;
 }
