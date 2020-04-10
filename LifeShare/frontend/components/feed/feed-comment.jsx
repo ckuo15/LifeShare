@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class CommentIndex extends React.Component {
+class FeedComment extends React.Component {
 
   constructor(props) {
     super(props)
@@ -13,14 +13,14 @@ class CommentIndex extends React.Component {
     const commentItems = this.props.commentIds.map(id => {
       comment = comments[id]
       return (
-        <li className="single-comment">
+        <li className="feed-single-comment">
           <div className="comment-section">
-            {this.props.feed ? null : <img className="comment-profile-pic" src={comment.user.photoUrl}/>}
-            <div className="comment-combo">
+            {this.props.feed ? null : <img className="comment-profile-pic" src={comment.user.photoUrl} />}
+            <div className="feed-comment-combo">
               <Link to={`/user/${comment.user.id}`}>
-                <span className="comment-username">{comment.user.username}</span>
+                <span className="feed-comment-username">{comment.user.username}</span>
               </Link>
-              <span className="comment-body">{comment.body}</span>
+              <span className="feed-comment-body">{comment.body}</span>
             </div>
           </div>
         </li>
@@ -28,10 +28,10 @@ class CommentIndex extends React.Component {
     })
     return (
       <ul className="realcomments">
-          {commentItems}
+        {commentItems}
       </ul>
     )
   }
 };
 
-export default CommentIndex;
+export default FeedComment;

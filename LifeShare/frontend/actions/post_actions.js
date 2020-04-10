@@ -10,6 +10,7 @@ const receivePosts = (payload) => ({
     payload
 });
 
+
 const receivePost = post => ({
     type: RECEIVE_POST,
     post
@@ -20,9 +21,12 @@ const removePost = postId => ({
     postId
 });
 
-
 export const requestPosts = (userId) => dispatch => (
     PostAPIUtil.fetchPosts(userId).then(posts => dispatch(receivePosts(posts)))
+);
+
+export const requestFeedPosts = () => dispatch => (
+    PostAPIUtil.fetchFeedPosts().then(posts => dispatch(receivePosts(posts)))
 );
 
 export const requestPost = postId => dispatch => (

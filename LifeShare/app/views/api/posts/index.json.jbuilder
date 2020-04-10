@@ -6,6 +6,12 @@ json.posts do
             if post.photo.attached?
                 json.photoUrl url_for(post.photo) #if no photo in the post, jbuilder will break. this is why WE NEED TO CHECK!!!!!
             end 
+            json.user do 
+                json.extract! post.user, :username, :id
+                if post.user.photo.attached?
+                    json.photoUrl url_for(post.user.photo)
+                end
+            end
         end
     end
 end

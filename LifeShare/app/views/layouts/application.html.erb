@@ -7,10 +7,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://kit.fontawesome.com/f391d4e959.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script type="text/javascript">
         window.othersplashURL = "<%= image_url('croppedimage1.png') %>";
         window.splashURL = "<%=image_url('image2.png')%>";
@@ -27,6 +28,7 @@
         window.commenticonURL = "<%=image_url('comments.png')%>"
         window.filledcommentURL = "<%=image_url('filledcomment.png')%>"
         window.moreiconURL = "<%=image_url('moreicon.png')%>"
+        window.me = "<%=image_url('prof-final.png')%>"
 
     </script>
     <%= favicon_link_tag asset_path('logo.png') %>
