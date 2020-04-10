@@ -1031,13 +1031,13 @@
 }
 
 .usernamecaption {
-  width: 230px;
+  width: 236px;
   word-break: break-all;
+  margin-left: 15px;
 }
 
 .usernamedisplay {
   font-weight: bold;
-  margin-left: 15px;
 }
 
 .caption {
@@ -1360,7 +1360,7 @@
 .feed-usernamecaption {
   width: 500px;
   word-break: break-all;
-  padding: 1px 15px;
+  padding: 3px 15px;
 }
 
 .feed-dev-icons{
