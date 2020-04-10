@@ -30,7 +30,9 @@ class FeedItem extends React.Component{
           <div className='feed-post-item-container'>
             <div className='feed-post-userinfo'>
               <img className='feed-profile-pic' src={this.props.post.user.photoUrl}/>
-              <p className='feed-username'>{this.props.post.user.username}</p>
+              <Link to={`/user/${this.props.post.user_id}`}>
+                <p className='feed-username'>{this.props.post.user.username}</p>
+              </Link>
             </div>
             <img className='feed-post-pic' src={photoUrl} />
             <div className='feed-heartscomments'>
