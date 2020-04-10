@@ -1178,7 +1178,7 @@
 
 .feed-post-item{
   border: 1px solid #DBDBDB;
-  width: 600px;
+  width: 580px;
   margin-top: 30px;
   background-color: white;
   border-radius: 3px;
@@ -1193,18 +1193,51 @@
 }
 
 .feed-dev-info{
-  border: 1px solid #DBDBDB;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.feed-dev-info-name{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.developer-title{
+  font-size: 12px;
+  color: #8E8E8E;
+}
+
+.developer-pic{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .feed-dev-links{
   border: 1px solid #DBDBDB;
+  border-radius: 3px;
+  height: 70px;
+  background: white;
+  padding: 15px;
+  font-size: 15px;
 }
 
-.feed-right{
-  margin-left: 20px;
-  margin-top: 30px;
-  width: 250px;
+.feed-dev-links-sites{
+  font-weight: bold;
+  color: #8E8E8E;
+  margin-bottom: 20px;
 }
+
+
+.feed-right{
+  margin-left: 40px;
+  margin-top: 30px;
+  width: 180px;
+}
+
 .feed-list{
   display: flex;
   flex-direction: column;
@@ -1219,8 +1252,8 @@
   margin: 13px;
 }
 .feed-post-pic{
-  height: 600px;
-  width: 600px;
+  height: 580px;
+  width: 580px;
   object-fit: cover;
 }
 
@@ -1268,12 +1301,12 @@
 
 .feed-usernamedisplay {
   font-weight: bold;
-  margin-left: 15px;
+  /* margin-left: 10px; */
   font-size: 15px;
 }
 
 .feed-caption {
-  margin-left: 7px;
+  padding-left: 5px;
   font-size: 15px;
 }
 
@@ -1296,7 +1329,7 @@
 }
 
 #feed-comment-iconn{
-  width: 530px;
+  width: 510px;
   margin-top: 10px;
 }
 
@@ -1306,4 +1339,59 @@
   font-weight: bold;
   cursor: pointer;
   margin-top: 7px;
+}
+
+.feed-added-time{
+  padding: 2px 16px;
+}
+
+.date-posted-ago{
+  color: #9C9C9C;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
+.feed-usernamecaption {
+  width: 500px;
+  word-break: break-all;
+  padding: 1px 15px;
+}
+
+.feed-dev-icons{
+  display: flex;
+  align-items: center;
+}
+.fa-linkedin{
+  font-size: 30px;
+  margin-right: 13px;
+
+}
+
+.fa-github-square{
+  font-size: 30px;
+  margin-right: 13px;
+
+}
+
+.fa-user-alt{
+  font-size: 27px;
+  margin-right: 13px;
+
+}
+
+.fa-angellist{
+  font-size: 30px;
+  margin-right: 13px;
+}
+
+.fa-copyright{
+  margin-right: 5px;
+}
+
+.footer{
+  color: rgb(180, 180, 180);
+  font-size: 12px;
+  margin-top: 25px;
 }

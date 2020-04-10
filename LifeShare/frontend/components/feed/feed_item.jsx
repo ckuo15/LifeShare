@@ -24,6 +24,7 @@ class FeedItem extends React.Component{
 
   render(){
     const photoUrl = this.props.post.photoUrl;
+    const moment = require('moment');
     return(
         <li key={this.props.post.id} className='feed-post-item'>
           <div className='feed-post-item-container'>
@@ -33,10 +34,9 @@ class FeedItem extends React.Component{
             </div>
             <img className='feed-post-pic' src={photoUrl} />
             <div className='feed-heartscomments'>
-              <label htmlFor="feed-comment-iconn"><img className='feed-comment-icon' src={window.commenticonURL} /></label>
-              {/* <p className='datecreated'>{formatDate(this.props.post.created_at)}</p> */}
+              <label htmlFor="feed-comment-iconn"><img className='comment-icon' src={window.commenticonURL} /></label>
             </div>
-            <div className='usernamecaption'>
+            <div className='feed-usernamecaption'>
               <Link to={`/user/${this.props.post.user.id}`}>
                 <span className='feed-usernamedisplay'>{this.props.post.user.username}</span>
               </Link>
@@ -46,7 +46,7 @@ class FeedItem extends React.Component{
               <FeedCommentContainer commentIds={this.props.post.comment_ids} feed={true}/>
             </div>
             <div className='feed-added-time'>
-
+            <p className='date-posted-ago'>{moment(this.props.post.created_at).fromNow()}</p>
             </div>
             <div className='feed-addComment'>
               <input id="feed-comment-iconn" type='text' placeholder='Add a comment...' onKeyDown={e => e.keyCode === 13 ? this.handleComment(e) : null} onChange={e => this.setState({ comment: e.target.value })} value={this.state.comment} />
