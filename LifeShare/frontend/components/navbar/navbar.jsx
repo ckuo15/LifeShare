@@ -60,6 +60,7 @@ class NavBar extends React.Component {
         }
         formData.append('post[caption]', this.state.caption);
         this.props.createPost(formData).then(() => this.closeModal());
+        this.setState({photoUrl: null, caption: ''});
     }
 
     handleCaption(field){
