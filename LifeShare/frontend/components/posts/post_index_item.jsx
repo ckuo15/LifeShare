@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 class PostIndexItem extends React.Component {
     constructor(props){
-        console.log(props)
         super(props),
         this.state={ 
             show: false,

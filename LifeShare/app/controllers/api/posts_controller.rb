@@ -24,9 +24,14 @@ class Api::PostsController < ApplicationController
 
     def index
         user = User.find(params[:user_id])
-        @posts = user.posts.includes(comments: [:user]) #includes load data in first query so you dont query every single time. got rid of N+1 query.
+        @posts = user.posts.includes(:user, comments: [:user]) #includes load data in first query so you dont query every single time. got rid of N+1 query.
         render :index
     end 
+
+    def feed 
+        @posts = Post.all.includes(:user, comments:[:user])
+        render :index
+    end
 
     def destroy
         @post = current_user.posts.find(params[:id])
