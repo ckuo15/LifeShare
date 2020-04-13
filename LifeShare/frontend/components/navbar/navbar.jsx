@@ -11,7 +11,8 @@ class NavBar extends React.Component {
             show: false,
             photoFile: null,
             photoUrl: null,
-            caption: ''
+            caption: '',
+            searchUser: ''
         };
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
@@ -19,6 +20,9 @@ class NavBar extends React.Component {
         this.handleCaption = this.handleCaption.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
+    // after desining search bar, input inside search bar is going to have onChange event, check 
+    // if this.state.searchUser.length > 0, this.props.searchUser(this.state.searchUser);
+    // value
 
     handleFile(e) {
         const file = e.currentTarget.files[0];
@@ -69,6 +73,10 @@ class NavBar extends React.Component {
         };
     }
 
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value });
+    };
+
     render (){
         const preview = this.state.photoUrl ? <img className='preview-post' src={this.state.photoUrl} /> : <img className='postimage' src={window.uploadimageURL} />;
 
@@ -95,6 +103,9 @@ class NavBar extends React.Component {
                         <img className='logo-icon' src={window.logoURL} />
                         <p className='logo-name-icon'>| LifeShare</p>
                     </Link>
+                </div>
+                <div className='navbar-searchbar'>
+                    <input type='text' value={this.state.searchUser} onChange={this.update('searchUser')} placeholder='Search' />
                 </div>
                 <div className='right-icons'>
                     <a href="https://www.youtube.com/watch?v=bjvc6N6px64"><img className='explore-icon' src={window.exploreURL} /></a>
