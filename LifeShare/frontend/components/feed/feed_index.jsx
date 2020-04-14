@@ -42,13 +42,13 @@ class Feed extends React.Component {
                     <div className='feed-dev-links'>
                         <p className='feed-dev-links-sites'>Suggestions For You</p>
                         <div className='feed-dev-icons'>
-                            <a href="https://www.linkedin.com/in/cindy-kuo-92621a1a5/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/ckuo15" target="_blank"><i class="fab fa-github-square"></i></a>
-                            <a href="https://www.cindycwkuo.com/" target="_blank"><i class="fas fa-user-alt"></i></a>
-                            <a href="https://angel.co/u/cindy-kuo-2" target="_blank"><i class="fab fa-angellist"></i></a>
+                            <a href="https://www.linkedin.com/in/cindy-kuo-92621a1a5/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/ckuo15" target="_blank"><i className="fab fa-github-square"></i></a>
+                            <a href="https://www.cindycwkuo.com/" target="_blank"><i className="fas fa-user-alt"></i></a>
+                            <a href="https://angel.co/u/cindy-kuo-2" target="_blank"><i className="fab fa-angellist"></i></a>
                         </div>
                     </div>
-                    <p class="footer"><i class="far fa-copyright"></i>2020 LIFESHARE</p>
+                    <p className="footer"><i className="far fa-copyright"></i>2020 LIFESHARE</p>
                 </div>
             </div>
         )

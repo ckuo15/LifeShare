@@ -314,6 +314,19 @@
     z-index: 1000;
 }
 
+
+.searchbar{
+  background-color: #FAFAFA;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  width: 200px;
+  border: 1px solid #DBDADB;
+  border-radius: 3px;
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
 .left-icons {
   margin-left: 150px;
   display: flex;
