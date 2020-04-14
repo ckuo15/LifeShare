@@ -36,7 +36,7 @@ class FeedItem extends React.Component{
             </div>
             <img className='feed-post-pic' src={photoUrl} />
             <div className='feed-heartscomments'>
-              <label htmlFor="feed-comment-iconn"><img className='comment-icon' src={window.commenticonURL} /></label>
+            <label htmlFor={`comment-${this.props.post.id}`}><img className='comment-icon' src={window.commenticonURL} /></label>
             </div>
             <div className='feed-usernamecaption'>
               <Link to={`/user/${this.props.post.user.id}`}>
@@ -51,7 +51,7 @@ class FeedItem extends React.Component{
             <p className='date-posted-ago'>{moment(this.props.post.created_at).fromNow()}</p>
             </div>
             <div className='feed-addComment'>
-              <input id="feed-comment-iconn" type='text' placeholder='Add a comment...' onKeyDown={e => e.keyCode === 13 ? this.handleComment(e) : null} onChange={e => this.setState({ comment: e.target.value })} value={this.state.comment} />
+              <input id={`comment-${this.props.post.id}`} type='text' placeholder='Add a comment...' onKeyDown={e => e.keyCode === 13 ? this.handleComment(e) : null} onChange={e => this.setState({ comment: e.target.value })} value={this.state.comment} />
               <p className='feed-postbutton' onClick={e => this.handleComment(e)}>Post</p>
             </div>
           </div>
