@@ -19,15 +19,44 @@ class NavBar extends React.Component {
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
         this.handleCaption = this.handleCaption.bind(this);
         this.closeModal = this.closeModal.bind(this);
-        // this.handleSearch = this.handleSearch.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
+        this.renderSearch = this.renderSearch.bind(this);
     }
     // after desining search bar, input inside search bar is going to have onChange event, check 
     // if this.state.searchUser.length > 0, this.props.searchUser(this.state.searchUser);
     // value
 
-    // handleSearch(){
-    //     this.props.searchUser(this.state.searchUser);
-    // }
+    
+    // componentDidUpdate(prevProps){
+    //     if (prevProps.searchedUser !== this.props.searchedUser){
+    //         console.log
+    //     }
+    // };
+
+    renderSearch(){
+        console.log(this.props.searchedUser[0])
+        if (this.props.searchedUser.length > 0){
+            return(
+                <div className="searchbar-result-container">
+                    <div>
+                        {this.props.searchedUser.map(user => (
+                            <li>{user.username}</li>
+                        ))}
+                    </div>
+                   
+                </div>
+            )
+        }
+    };
+    // .forEach users grab
+    // this.props.searchUser.forEach(user => {
+        //user.username
+        // img src = user.photoUrl
+    //})
+
+    handleSearch(){
+        this.props.searchUser(this.state.searchUser);
+    };
 
     handleFile(e) {
         const file = e.currentTarget.files[0];
@@ -79,6 +108,7 @@ class NavBar extends React.Component {
     }
 
     update(field) {
+        
         return e => this.setState({ [field]: e.currentTarget.value });
     };
 
@@ -116,10 +146,9 @@ class NavBar extends React.Component {
                         onChange={this.update('searchUser')} 
                         placeholder='&#xF002; Search'
                         className='searchbar'
-                        // onKeyDown={e => e.keyCode === 13 ? this.handleSearch(e) : null}
-                        // onChange={e => this.state.searchUser.length > 0 ? this.props.searchUser(this.state.searchUser) : null}
-                        // value={e.target.value}
+                        onKeyDown={e => e.keyCode === 13 ? this.handleSearch(e) : null}
                     />
+                    {this.renderSearch()}
                 </div>
                 <div className='right-icons'>
                     <a href="https://www.youtube.com/watch?v=bjvc6N6px64"><img className='explore-icon' src={window.exploreURL} /></a>
