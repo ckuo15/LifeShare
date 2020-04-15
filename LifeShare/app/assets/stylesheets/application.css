@@ -327,6 +327,14 @@
   padding: 5px;
   text-align: center;
 }
+
+.searchbar-username{
+  background: yellow;
+}
+
+.searchbar-result-container{
+  background: yellow;
+}
 .left-icons {
   margin-left: 150px;
   display: flex;

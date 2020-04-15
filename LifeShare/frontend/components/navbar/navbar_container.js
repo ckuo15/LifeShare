@@ -8,7 +8,7 @@ import { searchUser } from '../../actions/search_actions';
 const mapStateToProps = (state) => {
     return {
         currentUser: state.session.id,
-        searchUser: state.searchUser
+        searchedUser: state.searchUser
     };
 };
 
