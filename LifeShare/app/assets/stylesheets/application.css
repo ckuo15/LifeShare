@@ -332,6 +332,11 @@
   background: yellow;
 }
 
+.searchbar-userpic{
+  height: 30px;
+  width: 30px;
+}
+
 .searchbar-result-container{
   background: yellow;
 }
