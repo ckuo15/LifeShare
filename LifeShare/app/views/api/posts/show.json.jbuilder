@@ -7,5 +7,7 @@ json.user do
     json.extract! @post.user, :username, :id
     if @post.user.photo.attached?
         json.photoUrl url_for(@post.user.photo)
+    else 
+        json.photoUrl image_url("defaultPic.png")
     end
 end

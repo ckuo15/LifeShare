@@ -40,7 +40,10 @@ class NavBar extends React.Component {
                 <div className="searchbar-result-container">
                     <div>
                         {this.props.searchedUser.map(user => (
-                            <li>{user.username}</li>
+                            <li>
+                                <img src={user.photoUrl} className="searchbar-userpic"/>
+                                <span>{user.username}</span>
+                            </li>
                         ))}
                     </div>
                    

@@ -10,6 +10,8 @@ json.posts do
                 json.extract! post.user, :username, :id
                 if post.user.photo.attached?
                     json.photoUrl url_for(post.user.photo)
+                else 
+                    json.photoUrl image_url("defaultPic.png")
                 end
             end
         end
@@ -26,6 +28,8 @@ json.comments do
                     json.extract! comment.user, :username, :id
                     if comment.user.photo.attached?
                         json.photoUrl url_for(comment.user.photo)
+                    else 
+                        json.photoUrl image_url("defaultPic.png")
                     end
                 end
             end
