@@ -1,5 +1,5 @@
 json.array! @users do |user|
-  json.extract! user, :username
+  json.extract! user, :username, :fullname, :id
   if user.photo.attached?
        json.photoUrl url_for(user.photo)
   else 

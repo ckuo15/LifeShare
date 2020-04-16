@@ -27,7 +27,7 @@ class FeedComment extends React.Component {
       )
     })
     return (
-      <ul className="realcomments">
+      <ul className="feed-realcomments">
         {commentItems}
       </ul>
     )
