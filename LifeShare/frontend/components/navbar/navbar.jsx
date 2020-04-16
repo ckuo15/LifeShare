@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
@@ -12,53 +12,38 @@ class NavBar extends React.Component {
             photoFile: null,
             photoUrl: null,
             caption: '',
-            searchUser: ''
+            searchUser: '',
+            showResults: false
         };
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
         this.handleSubmitForm = this.handleSubmitForm.bind(this);
         this.handleCaption = this.handleCaption.bind(this);
         this.closeModal = this.closeModal.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
         this.renderSearch = this.renderSearch.bind(this);
     }
-    // after desining search bar, input inside search bar is going to have onChange event, check 
-    // if this.state.searchUser.length > 0, this.props.searchUser(this.state.searchUser);
-    // value
 
-    
-    // componentDidUpdate(prevProps){
-    //     if (prevProps.searchedUser !== this.props.searchedUser){
-    //         console.log
-    //     }
-    // };
 
     renderSearch(){
-        console.log(this.props.searchedUser[0])
-        if (this.props.searchedUser.length > 0){
+        if (this.props.searchedUser.length > 0 && this.state.showResults && this.state.searchUser.length > 0){
             return(
                 <div className="searchbar-result-container">
-                    <div>
-                        {this.props.searchedUser.map(user => (
-                            <li>
-                                <img src={user.photoUrl} className="searchbar-userpic"/>
-                                <span>{user.username}</span>
-                            </li>
-                        ))}
-                    </div>
-                   
+                    {this.props.searchedUser.map(user => (
+                        <li className='search-user-item'
+                            onMouseDown={e => {
+                                this.props.history.push(`/user/${user.id}`)
+                                this.setState({searchUser: ''})
+                                }}>
+                            <img src={user.photoUrl} className="searchbar-userpic"/>
+                            <div className="search-username-fullname">
+                                <span className="search-username-result">{user.username}</span>
+                                <span className="search-fullname-result">{user.fullname}</span>
+                            </div>
+                        </li>
+                    ))}
                 </div>
             )
         }
-    };
-    // .forEach users grab
-    // this.props.searchUser.forEach(user => {
-        //user.username
-        // img src = user.photoUrl
-    //})
-
-    handleSearch(){
-        this.props.searchUser(this.state.searchUser);
     };
 
     handleFile(e) {
@@ -110,9 +95,10 @@ class NavBar extends React.Component {
         };
     }
 
-    update(field) {
-        
-        return e => this.setState({ [field]: e.currentTarget.value });
+    update(query) {
+        this.setState({ searchUser: query }, () => {
+            this.props.searchUser(this.state.searchUser);
+        });
     };
 
     render (){
@@ -146,10 +132,11 @@ class NavBar extends React.Component {
                     <input 
                         type='text' 
                         value={this.state.searchUser} 
-                        onChange={this.update('searchUser')} 
+                        onChange={e => this.update(e.target.value)} 
                         placeholder='&#xF002; Search'
                         className='searchbar'
-                        onKeyDown={e => e.keyCode === 13 ? this.handleSearch(e) : null}
+                        onFocus={e => this.setState({showResults: true})}
+                        onBlur={e => this.setState({showResults: true})}
                     />
                     {this.renderSearch()}
                 </div>
@@ -167,10 +154,4 @@ class NavBar extends React.Component {
     }
 };
 
-export default NavBar;
-
-// route for line 20 to profile (need help)
-// have a container component to connect the slice of state for the id of the user
-// props.userId
-// container mSTP, takes in state and set up key of  userId: state.session.id 
-// in here this.props.userId
+export default withRouter(NavBar);
