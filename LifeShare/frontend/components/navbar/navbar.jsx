@@ -136,7 +136,7 @@ class NavBar extends React.Component {
                         placeholder='&#xF002; Search'
                         className='searchbar'
                         onFocus={e => this.setState({showResults: true})}
-                        onBlur={e => this.setState({showResults: true})}
+                        onBlur={e => this.setState({showResults: false})}
                     />
                     {this.renderSearch()}
                 </div>
