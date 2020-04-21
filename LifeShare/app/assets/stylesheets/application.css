@@ -1076,12 +1076,13 @@
 }
 
 .comment-body{
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .comment-combo{
   margin-top: 5px;
 }
+
 
 
 .userblock {
@@ -1100,7 +1101,7 @@
 
 .usernamecaption {
   width: 236px;
-  word-break: break-all;
+  word-wrap: break-word;
   margin-left: 15px;
 }
 
@@ -1150,6 +1151,10 @@
   /* margin-left: 5px; */
   margin-bottom: 2px;
   cursor: pointer;
+}
+
+.comment-iconn{
+  width: 91%;
 }
 
 #comment-iconn{
@@ -1348,7 +1353,7 @@
 .feed-comments{
   max-height: 80px;
   overflow-y: auto;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .feed-comment-username{
@@ -1430,7 +1435,7 @@
 
 .feed-usernamecaption {
   width: 500px;
-  word-break: break-all;
+  word-wrap: break-word;
   padding: 3px 15px;
 }
 
