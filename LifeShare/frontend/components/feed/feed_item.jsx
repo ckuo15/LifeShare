@@ -51,7 +51,7 @@ class FeedItem extends React.Component{
             <p className='date-posted-ago'>{moment(this.props.post.created_at).fromNow()}</p>
             </div>
             <div className='feed-addComment'>
-              <input id={`comment-${this.props.post.id}`} type='text' placeholder='Add a comment...' onKeyDown={e => e.keyCode === 13 ? this.handleComment(e) : null} onChange={e => this.setState({ comment: e.target.value })} value={this.state.comment} />
+              <input id={`comment-${this.props.post.id}`} className='comment-iconn' type='text' placeholder='Add a comment...' onKeyDown={e => e.keyCode === 13 ? this.handleComment(e) : null} onChange={e => this.setState({ comment: e.target.value })} value={this.state.comment} />
               <p className='feed-postbutton' onClick={e => this.handleComment(e)}>Post</p>
             </div>
           </div>
