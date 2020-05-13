@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
             <div className='splash-container'>
                 <div className='signup-container'>
                     <form onSubmit={this.handleSubmit} className='login-box'>
-                        <h1>Welcome to LifeShare</h1>
+                        <h1>LifeShare</h1>
                         <h2> Simply upload, and share!</h2>
                         {this.renderErrors()}
                         <div className='login-form'>
@@ -63,7 +63,7 @@ class LoginForm extends React.Component {
                         </div>
                     </form>
                     <div className='splash-login-ask'>
-                        <p>Don't have an account? <span className='login'><Link onClick={this.props.clearErrors } to='/signup'>Sign Up</Link></span></p>
+                        <p className='ask-account'>Don't have an account? <span className='login'><Link onClick={this.props.clearErrors } to='/signup'>Sign Up</Link></span></p>
                     </div>
                 </div>
             </div>

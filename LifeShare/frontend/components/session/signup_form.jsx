@@ -67,7 +67,7 @@ class SignupForm extends React.Component {
                         </div>
                     </form>
                     <div className='splash-ask'>
-                        <p>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
+                        <p className='ask-account'>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
                     </div>
                 </div>
             )
@@ -76,7 +76,7 @@ class SignupForm extends React.Component {
                 <div className='splash-container'>
                     <div className='signup-container'>
                         <form onSubmit={this.handleSubmit} className='signup-box'>
-                            <h1>Welcome to LifeShare</h1>
+                            <h1>LifeShare</h1>
                             <h2> Simply upload, and share!</h2>
                             {this.renderErrors()}
                             <div className='signup-form'>
@@ -91,7 +91,7 @@ class SignupForm extends React.Component {
                             </div>
                         </form>
                         <div className='splash-ask'>
-                            <p>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
+                            <p className='ask-account'>Have an account? <span className='login'><Link onClick={this.props.clearErrors} to='/login'>Log In</Link></span></p>
                         </div>
                     </div>
                 </div>
